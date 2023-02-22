@@ -1,14 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
 
-import Footer from './Footer'
-import Navbar from './Navbar'
 import { useRouter } from 'next/router'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 const Layout = ({ children }) => {
     const router = useRouter()
     return (
-        <div className="layout">
+        <div className="">
             <Head>
                 <title>Face2-Leading Clothing Brand</title>
             </Head>
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
                     <Navbar />
                 </header>
             )}
-            <main className="main-container">{children}</main>
+            <main className="">{children}</main>
             {router.pathname !== '/404' && (
                 <footer>
                     <Footer />
