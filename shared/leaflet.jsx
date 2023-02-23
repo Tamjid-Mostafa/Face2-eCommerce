@@ -53,7 +53,7 @@ export default function Leaflet({
             </motion.div>
             <motion.div
                 key="leaflet-backdrop"
-                className="fixed inset-0 z-30 bg-gray-100 bg-opacity-10 backdrop-blur"
+                className="fixed inset-0 z-[10] bg-gray-100 bg-opacity-10 backdrop-blur"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

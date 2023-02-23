@@ -31,12 +31,9 @@ export default async function handler(req) {
         }}
       >
         <img
-          src={new URL(
-            '../../public/3a-2500x1667.jpg',
-            import.meta.url
-          ).toString()}
+          src={new URL('../../public/logo.png', import.meta.url).toString()}
           alt="Face2 Logo"
-          tw="w-20 h-20 mb-4 opacity-95"
+          tw="w-48 h-48 mb-4 opacity-95"
         />
         <h1
           style={{
