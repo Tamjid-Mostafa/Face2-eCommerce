@@ -9,7 +9,7 @@ export default function Home({ meta }) {
     <>
       <Meta {...meta} />
       <main>
-        <h1 className="text-4xl font-extrabold text-red-600">Hello World !</h1>
+        <h1 className="text-9xl font-extrabold text-red-600">Hello !</h1>
       </main>
     </>
   )
