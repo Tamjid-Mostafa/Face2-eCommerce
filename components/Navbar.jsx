@@ -122,16 +122,34 @@ const Navbar = () => {
                                     `}
                                 />
                                 <div className="absolute right-1 ">
-                                    <button
-                                        onClick={() => setSearch(!search)}
-                                        className="relative flex h-6 w-6 sm:w-max ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
-                                    >
-                                        <FaSearch className="relative" />
-                                    </button>
+                                    <Tooltip content='Search here'>
+                                        <button
+                                            onClick={() => setSearch(!search)}
+                                            className="relative flex h-6 w-6 sm:w-max ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                                        >
+                                            <FaSearch className="relative" />
+                                        </button>
+                                    </Tooltip>
                                 </div>
                             </div>
-                            <div>
-                                <PopCart />
+                            <div className='flex items-center justify-between gap-2'>
+                                <AnimatePresence>
+                                    <Tooltip content="Cart">
+                                        <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
+                                            <PopCart />
+                                        </motion.div>
+
+                                    </Tooltip>
+                                </AnimatePresence>
+                                <AnimatePresence>
+                                    <Tooltip content="Wish List">
+                                        <motion.button
+                                            className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-violet11 bg-white shadow-[0_2px_10px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                            {...FADE_IN_ANIMATION_SETTINGS}>
+                                            <HeartIcon />
+                                        </motion.button>
+                                    </Tooltip>
+                                </AnimatePresence>
                             </div>
                         </motion.div>
                     </AnimatePresence>
