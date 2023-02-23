@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 
@@ -7,7 +7,7 @@ const NavMenu = () => {
         <NavigationMenu.Root className="relative z-10 flex w-screen justify-start">
             <NavigationMenu.List className="flex list-none p-1 ">
                 <NavigationMenu.Item>
-                    <NavigationMenu.Trigger className="text-primary hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_px]">
+                    <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_px]">
                         Learn{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
@@ -110,7 +110,7 @@ const NavMenu = () => {
     );
 };
 
-const ListItem = forwardRef(({ className, children, title, ...props }, forwardedRef) => (
+const ListItem = React.forwardRef(({ className, children, title, ...props }, forwardedRef) => (
     <li>
         <NavigationMenu.Link asChild>
             <a

@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-import { AnimatePresence } from "framer-motion";
 import useWindowSize from '@/lib/hooks/use-window-size';
+import React, { useState } from 'react'
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import Leaflet from './leaflet';
 
-export default function Tooltip() {
+const Tooltip = ({
+    children,
+    content,
+    fullWidth,
+}) => {
     const [openTooltip, setOpenTooltip] = useState(false);
 
     const { isMobile, isDesktop } = useWindowSize();
@@ -34,13 +37,13 @@ export default function Tooltip() {
             {isDesktop && (
                 <TooltipPrimitive.Provider delayDuration={100}>
                     <TooltipPrimitive.Root>
-                        <TooltipPrimitive.Trigger className="hidden sm:inline-flex" asChild>
+                        <TooltipPrimitive.Trigger className=" sm:inline-flex" asChild>
                             {children}
                         </TooltipPrimitive.Trigger>
                         <TooltipPrimitive.Content
                             sideOffset={4}
                             side="top"
-                            className="z-[10] hidden animate-slide-up-fade items-center overflow-hidden rounded-md border border-gray-200 bg-white drop-shadow-lg sm:block"
+                            className="z-[10]  animate-slide-up-fade items-center overflow-hidden rounded-md border border-gray-200 bg-white drop-shadow-lg sm:block"
                         >
                             <TooltipPrimitive.Arrow className="fill-current text-white" />
                             {typeof content === "string" ? (
@@ -60,3 +63,5 @@ export default function Tooltip() {
         </>
     );
 }
+
+export default Tooltip
