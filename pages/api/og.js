@@ -31,8 +31,11 @@ export default async function handler(req) {
         }}
       >
         <img
-          src={new URL('../../public/next.svg', import.meta.url).toString()}
-          alt="face2 Logo"
+          src={new URL(
+            '../../public/3a-2500x1667.jpg',
+            import.meta.url
+          ).toString()}
+          alt="Face2 Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1
