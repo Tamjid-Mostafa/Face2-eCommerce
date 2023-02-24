@@ -3,28 +3,27 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
 import Header from '../Header'
+import Meta from './meta'
+import { useSignInModal } from '../sign-in-modal'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, meta }) => {
     const router = useRouter()
+    const { SignInModal, setShowSignInModal } = useSignInModal()
     return (
-        <>
-            <Head>
-                <title>Face2-Leading Clothing Brand</title>
-            </Head>
+        <div className='relative'>
+            <Meta {...meta} />
+            <SignInModal />
             <div className="bg-gradient-to-br from-indigo-50 via-white to-cyan-100">
                 {router.pathname !== '/404' && (
-                    <header className=''>
-                        <Header />
-                    </header>
+                    <Header setShowSignInModal={setShowSignInModal} />
                 )}
-                <main className="">{children}</main>
+                {children}
                 {router.pathname !== '/404' && (
-                    <footer>
-                        <Footer />
-                    </footer>
+                    <Footer />
+
                 )}
             </div>
-        </>
+        </div>
     )
 }
 

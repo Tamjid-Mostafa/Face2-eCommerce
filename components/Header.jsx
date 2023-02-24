@@ -9,7 +9,7 @@ import React from 'react'
 import { FaMapMarkerAlt, FaSearch, FaShoppingBag } from 'react-icons/fa';
 import NavMenu from './NavMenu';
 
-const Header = () => {
+const Header = ({ setShowSignInModal }) => {
 
     const scrolled = useScroll(50);
     return (
@@ -50,7 +50,7 @@ const Header = () => {
                         <AnimatePresence>
                             <Tooltip content="Search">
                                 <motion.button
-                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
                                     <MagnifyingGlassIcon />
                                 </motion.button>
@@ -60,7 +60,7 @@ const Header = () => {
                         <AnimatePresence>
                             <Tooltip content="Store Location">
                                 <motion.button
-                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
                                     <FaMapMarkerAlt />
                                 </motion.button>
@@ -70,7 +70,8 @@ const Header = () => {
                         <AnimatePresence>
                             <Tooltip content="Profile">
                                 <motion.button
-                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    onClick={() => setShowSignInModal(true)}
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
                                     <PersonIcon />
                                 </motion.button>
@@ -79,7 +80,7 @@ const Header = () => {
                         <AnimatePresence>
                             <Tooltip content="Cart">
                                 <motion.button
-                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
                                     <FaShoppingBag />
                                 </motion.button>

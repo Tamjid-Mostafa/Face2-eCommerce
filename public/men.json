@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Men-1",
+        "image": "https://i.ibb.co/J7QStw8/men-1.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Men-2",
+        "image": "https://i.ibb.co/FVNX1mg/men-2.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Men-3",
+        "image": "https://i.ibb.co/cTfPXRn/men-3.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Men-4",
+        "image": "https://i.ibb.co/fHQy75t/men-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Men-5",
+        "image": "https://i.ibb.co/QfpFF50/men-5.jpg",
+        "price": "999"
+    }
+]
