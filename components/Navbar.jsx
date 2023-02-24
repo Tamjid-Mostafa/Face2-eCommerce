@@ -95,7 +95,7 @@ const Navbar = () => {
                 <div className='bg-primary'>
                     <AnimatePresence>
                         <motion.div
-                            className={`mx-5 flex h-10 max-w-screen-xl items-center justify-between xl:mx-auto`}
+                            className={`flex h-10 max-w-screen-xl items-center justify-between xl:mx-auto`}
                             {...FADE_DOWN_ANIMATION_VARIANTS}
                         >
                             <NavMenu className={`justify-start`} />
