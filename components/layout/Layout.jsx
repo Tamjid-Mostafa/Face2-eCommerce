@@ -10,21 +10,20 @@ import { useSignInModal } from '../sign-in-modal'
 
 const Layout = ({ children, meta }) => {
     const router = useRouter()
-    const { SignInModal, setShowSignInModal } = useSignInModal()
+
     return (
-        <div className='relative'>
+        <div className='overflow-hidden relative'>
             <Meta {...meta} />
-            <SignInModal />
-            <div className="bg-gradient-to-br from-indigo-50 via-white to-cyan-100">
+            <>
                 {router.pathname !== '/404' && (
-                    <Header setShowSignInModal={setShowSignInModal} />
+                    <Navbar />
                 )}
                 {children}
                 {router.pathname !== '/404' && (
                     <Footer />
 
                 )}
-            </div>
+            </>
         </div>
     )
 }

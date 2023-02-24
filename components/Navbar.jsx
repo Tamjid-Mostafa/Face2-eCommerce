@@ -15,14 +15,16 @@ import { FaSearch } from 'react-icons/fa'
 import HeaderMini from './HeaderMini'
 import NavMenu from './NavMenu'
 import PopCart from './PopCart'
+import { useSignInModal } from './sign-in-modal'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
     const [search, setSearch] = useState()
+    const { SignInModal, setShowSignInModal } = useSignInModal()
     return (
         <div
         // className='fixed top-0 w-full z-30 transition-all'
-        >
+        ><SignInModal />
 
             {/*  <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 -z-10" />
             <HeaderMini /> */}
@@ -82,6 +84,7 @@ const Navbar = () => {
                         <AnimatePresence>
                             <Tooltip content="Wish List">
                                 <motion.button
+                                    onClick={() => setShowSignInModal(true)}
                                     className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-violet11 bg-white shadow-[0_2px_10px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
                                     <HeartIcon />
