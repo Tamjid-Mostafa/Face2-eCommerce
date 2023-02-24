@@ -1,6 +1,7 @@
 import { FADE_IN_ANIMATION_SETTINGS } from '@/lib/constants';
 import useScroll from '@/lib/hooks/use-scroll';
-import { MagnifyingGlassIcon, PersonIcon } from '@radix-ui/react-icons';
+import Tooltip from '@/shared/tooltip';
+import { HeartIcon, MagnifyingGlassIcon, PersonIcon } from '@radix-ui/react-icons';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -47,44 +48,42 @@ const Header = () => {
 
                     <div className='flex gap-2'>
                         <AnimatePresence>
+                            <Tooltip content="Search">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <MagnifyingGlassIcon />
+                                </motion.button>
+                            </Tooltip>
+                        </AnimatePresence>
 
-                            <motion.button
-                                className=""
-                                // onClick={() => setShowSignInModal(true)}
-                                {...FADE_IN_ANIMATION_SETTINGS}
-                            >
-                                <MagnifyingGlassIcon />
-                            </motion.button>
+                        <AnimatePresence>
+                            <Tooltip content="Store Location">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <FaMapMarkerAlt />
+                                </motion.button>
+                            </Tooltip>
+
                         </AnimatePresence>
                         <AnimatePresence>
-
-                            <motion.button
-                                className=""
-                                // onClick={() => setShowSignInModal(true)}
-                                {...FADE_IN_ANIMATION_SETTINGS}
-                            >
-                                <FaMapMarkerAlt />
-                            </motion.button>
+                            <Tooltip content="Profile">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <PersonIcon />
+                                </motion.button>
+                            </Tooltip>
                         </AnimatePresence>
                         <AnimatePresence>
-
-                            <motion.button
-                                className=""
-                                // onClick={() => setShowSignInModal(true)}
-                                {...FADE_IN_ANIMATION_SETTINGS}
-                            >
-                                <PersonIcon />
-                            </motion.button>
-                        </AnimatePresence>
-                        <AnimatePresence>
-
-                            <motion.button
-                                className=""
-                                // onClick={() => setShowSignInModal(true)}
-                                {...FADE_IN_ANIMATION_SETTINGS}
-                            >
-                                <FaShoppingBag />
-                            </motion.button>
+                            <Tooltip content="Cart">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-default outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <FaShoppingBag />
+                                </motion.button>
+                            </Tooltip>
                         </AnimatePresence>
                     </div>
                 </div>

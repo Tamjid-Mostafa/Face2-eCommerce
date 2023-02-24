@@ -55,8 +55,8 @@ const NavMenu = ({ className }) => {
                             aria-hidden
                         />
                     </NavigationMenu.Trigger>
-                    <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-screen">
-                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:grid-cols-[0.75fr_1fr_1fr_1fr] grid-cols-[1fr_1fr]">
+                    <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
+                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr] grid-cols-[0.75fr_0.75fr]">
                             <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
                                     <a
@@ -87,6 +87,7 @@ const NavMenu = ({ className }) => {
                         </ul>
                     </NavigationMenu.Content>
                 </NavigationMenu.Item>
+
 
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_2px]">
@@ -185,7 +186,7 @@ const NavMenu = ({ className }) => {
 
             </NavigationMenu.List>
 
-            <div className="perspective-[2000px] absolute top-full left-0 flex w-full justify-center">
+            <div className={`perspective-[2000px] absolute top-full left-0 flex w-full ${className}`}>
                 <NavigationMenu.Viewport className="data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[6px] bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
             </div>
         </NavigationMenu.Root>

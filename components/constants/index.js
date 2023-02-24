@@ -22,31 +22,31 @@ export const menMenu = [
     title: 'T-shirts',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
   },
-  {
+  /* {
     id: '/sailor-shirts-men',
     title: 'Sailor Shorts',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
-  },
-  {
+  }, */
+  /* {
     id: '/sweatshirts-hoodies-&-knitwear-men',
     title: 'Sweatshirts, Hoodies & Knitwear',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
-  },
-  {
+  }, */
+  /* {
     id: '/shirts-&-polo-shirts-men',
     title: 'Shirts & Polo Shirts',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
-  },
-  {
+  }, */
+  /* {
     id: '/jackets-men',
     title: 'Jackets',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
-  },
-  {
+  }, */
+  /* {
     id: '/pants-&-shorts-pants-men',
     title: 'Pants & Short Pants',
     body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, officia.',
-  },
+  }, */
   {
     id: '/outfits-sets-men',
     title: 'Outfits Sets',
