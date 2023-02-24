@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
 import Navbar from '../Navbar'
+import Header from '../Header'
 
 const Layout = ({ children }) => {
     const router = useRouter()
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
             <div className="bg-gradient-to-br from-indigo-50 via-white to-cyan-100">
                 {router.pathname !== '/404' && (
                     <header className=''>
-                        <Navbar />
+                        <Header />
                     </header>
                 )}
                 <main className="">{children}</main>

@@ -4,6 +4,7 @@ import {
     FADE_UP_ANIMATION_VARIANTS,
 } from '@/lib/constants'
 import useScroll from '@/lib/hooks/use-scroll'
+
 import Tooltip from '@/shared/tooltip'
 import { HeartIcon } from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -19,11 +20,13 @@ const Navbar = () => {
     const scrolled = useScroll(200)
     const [search, setSearch] = useState()
     return (
-        <>
+        <div
+        // className='fixed top-0 w-full z-30 transition-all'
+        >
 
-            {/* <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" /> */}
-            <HeaderMini />
-            <div className={`border-b border-gray-200  z-30 transition-all`}>
+            {/*  <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 -z-10" />
+            <HeaderMini /> */}
+            <div className={`  z-30 transition-all `}>
                 <div
                     className={`mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto `}
                 >
@@ -95,7 +98,7 @@ const Navbar = () => {
                             className={`mx-5 flex h-10 max-w-screen-xl items-center justify-between xl:mx-auto`}
                             {...FADE_DOWN_ANIMATION_VARIANTS}
                         >
-                            <NavMenu />
+                            <NavMenu className={`justify-start`} />
                         </motion.div>
                     </AnimatePresence>
                 </div>
@@ -156,7 +159,7 @@ const Navbar = () => {
                 </div>
             </>
 
-        </>
+        </div>
     )
 }
 

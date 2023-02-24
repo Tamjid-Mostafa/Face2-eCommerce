@@ -2,9 +2,9 @@ import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 
-const NavMenu = () => {
+const NavMenu = ({ className }) => {
     return (
-        <NavigationMenu.Root className="relative z-10 flex w-screen justify-start">
+        <NavigationMenu.Root className={`relative z-10 flex w-screen ${className}`}>
             <NavigationMenu.List className="flex list-none p-1 ">
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_px]">

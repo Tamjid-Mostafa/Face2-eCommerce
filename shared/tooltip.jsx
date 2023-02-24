@@ -35,7 +35,7 @@ const Tooltip = ({
                 </Leaflet>
             )}
             {isDesktop && (
-                <TooltipPrimitive.Provider delayDuration={100}>
+                <TooltipPrimitive.Provider delayDuration={500}>
                     <TooltipPrimitive.Root>
                         <TooltipPrimitive.Trigger className=" sm:inline-flex" asChild>
                             {children}
