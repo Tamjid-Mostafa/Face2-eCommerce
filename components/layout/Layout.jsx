@@ -1,9 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
-import Navbar from '../Navbar'
 import Header from '../Header'
 
 const Layout = ({ children }) => {

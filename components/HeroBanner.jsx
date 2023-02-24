@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Tooltip from '@/shared/tooltip';
 import React, { useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import { RxDotFilled, RxPinRight } from 'react-icons/rx'
@@ -6,12 +7,12 @@ import { RxDotFilled, RxPinRight } from 'react-icons/rx'
 export default function HeroBanner() {
     const slides = [
         {
-            image: "https://i.ibb.co/2WYS5sc/updfodkf.jpg",
+            image: "https://i.ibb.co/YQb8Q6b/Hero.jpg",
             heading: "Convenient easy way of learning new skills!",
             text: "The ultimate planning solution for busy women who want to reach their personal goals.Effortless comfortable eye-catching unique detail "
         },
         {
-            image: "https://i.ibb.co/2WYS5sc/updfodkf.jpg",
+            image: "https://i.ibb.co/gyPWThn/herosTwo.jpg",
             heading: "It's time to amplify your online Career",
             text: "The ultimate planning solution for busy women who want to reach their personal goals.Effortless comfortable eye-catching unique detail "
         },
@@ -65,22 +66,26 @@ export default function HeroBanner() {
             </div>
 
             {/* left arrow */}
-            <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] left-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
-                <BsChevronCompactLeft onClick={prevSlide} size={30}></BsChevronCompactLeft>
-            </div>
+            <Tooltip content="Previous">
+                <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] left-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
+                    <BsChevronCompactLeft onClick={prevSlide} size={30}></BsChevronCompactLeft>
+                </div>
+            </Tooltip>
             {/* right arrow */}
-            <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] right-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
-                <BsChevronCompactRight onClick={nextSlide} size={30}></BsChevronCompactRight>
-            </div>
+            <Tooltip content="Next">
+                <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] right-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
+                    <BsChevronCompactRight onClick={nextSlide} size={30}></BsChevronCompactRight>
+                </div>
+            </Tooltip>
 
             {/* dots */}
-            <div className="flex top-4 justify-center py-2">
+            {/* <div className="flex top-4 justify-center py-2">
                 {slides.map((slide, slideIndex) => (
                     <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer'>
                         <RxDotFilled className={`${currentSlide === slideIndex ? "text-white text-3xl" : ""}`} />
                     </div>
                 ))}
-            </div>
+            </div> */}
         </div >
     )
 }
