@@ -14,6 +14,7 @@ const HeaderMini = () => {
                     <div>Compare (0)</div>
                     <div>Orders (0)</div>
                     <div>Checkout</div>
+                    <div>LOGIN</div>
                     <div>LOGOUT</div>
                 </div>
             </div>

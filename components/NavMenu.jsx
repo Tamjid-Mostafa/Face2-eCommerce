@@ -1,106 +1,188 @@
 import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
+import { menMenu, paijamaMenu, panjabiMenu, womenMenu } from './constants';
 
-const NavMenu = () => {
+const NavMenu = ({ className }) => {
     return (
-        <NavigationMenu.Root className="relative z-10 flex w-screen justify-start">
+        <NavigationMenu.Root className={`relative z-10 flex w-screen ${className}`}>
             <NavigationMenu.List className="flex list-none p-1 ">
                 <NavigationMenu.Item>
-                    <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_px]">
-                        Learn{' '}
+                    <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_px]">
+                        Women{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
                         />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
-                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
-                            <li className="row-span-3 grid">
+                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr] grid-cols-[0.75fr_0.75fr]">
+                            <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
                                     <a
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
-                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
                                         href="/"
                                     >
-                                        <svg aria-hidden width="38" height="38" viewBox="0 0 25 25" fill="white">
-                                            <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
-                                            <path d="M12 0H4V8H12V0Z"></path>
-                                            <path d="M17 8C19.2091 8 21 6.20914 21 4C21 1.79086 19.2091 0 17 0C14.7909 0 13 1.79086 13 4C13 6.20914 14.7909 8 17 8Z"></path>
-                                        </svg>
-                                        <div className="mt-4 mb-[7px] text-[18px] font-medium leading-[1.2] text-white">
-                                            Radix Primitives
+                                        <img className=' h-full object-cover object-center rounded-lg ' src="/assets/Menu-Femme_large.webp" alt="" />
+                                        {/* <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
+                                            {''}
                                         </div>
-                                        <p className="text-mauve4 text-[14px] leading-[1.3]">
-                                            Unstyled, accessible components for React.
-                                        </p>
+                                        <p className="text-mauve4 text-[14px] leading-[1.3] ">
+                                            {''}
+                                        </p> */}
                                     </a>
                                 </NavigationMenu.Link>
                             </li>
-                            <ListItem title="Getting started" href="/docs/primitives/overview/getting-started">
-                                A quick tutorial to get you up and running with Radix Primitives.
-                            </ListItem>
-                            <ListItem title="Styling" href="/docs/primitives/overview/styling">
-                                Unstyled and compatible with any styling solution.
-                            </ListItem>
-
-                            <ListItem href="https://stitches.dev/" title="Stitches">
-                                CSS-in-JS with best-in-class developer experience.
-                            </ListItem>
-                            <ListItem href="/colors" title="Colors">
-                                Beautiful, thought-out palettes with auto dark mode.
-                            </ListItem>
-                            <ListItem href="https://icons.radix-ui.com/" title="Icons">
-                                A crisp set of 15x15 icons, balanced and consistent.
-                            </ListItem>
+                            {
+                                womenMenu.map((m, i) => {
+                                    const { id, title, body } = m;
+                                    return (
+                                        <ListItem key={i} title={title} href={id}>
+                                            {body}
+                                        </ListItem>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </NavigationMenu.Content>
+                </NavigationMenu.Item>
+                <NavigationMenu.Item>
+                    <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_px]">
+                        Men{' '}
+                        <CaretDownIcon
+                            className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+                            aria-hidden
+                        />
+                    </NavigationMenu.Trigger>
+                    <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-screen">
+                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:grid-cols-[0.75fr_1fr_1fr_1fr] grid-cols-[1fr_1fr]">
+                            <li className="row-span-3 sm:grid hidden">
+                                <NavigationMenu.Link asChild>
+                                    <a
+                                        className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
+                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
+                                        href="/"
+                                    >
+                                        <img className=' h-full object-cover object-center rounded-lg ' src="/assets/Menu-Homme_large.webp" alt="" />
+                                        {/* <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
+                                            {''}
+                                        </div>
+                                        <p className="text-mauve4 text-[14px] leading-[1.3] ">
+                                            {''}
+                                        </p> */}
+                                    </a>
+                                </NavigationMenu.Link>
+                            </li>
+                            {
+                                menMenu.map((m, i) => {
+                                    const { id, title, body } = m;
+                                    return (
+                                        <ListItem key={i} title={title} href={id}>
+                                            {body}
+                                        </ListItem>
+                                    )
+                                })
+                            }
                         </ul>
                     </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item>
-                    <NavigationMenu.Trigger className="text-violet11 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
-                        Overview{' '}
+                    <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_2px]">
+                        Panjabi{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
                         />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-                        <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3">
-                            <ListItem title="Introduction" href="/docs/primitives/overview/introduction">
-                                Build high-quality, accessible design systems and web apps.
-                            </ListItem>
-                            <ListItem title="Getting started" href="/docs/primitives/overview/getting-started">
-                                A quick tutorial to get you up and running with Radix Primitives.
-                            </ListItem>
-                            <ListItem title="Styling" href="/docs/primitives/overview/styling">
-                                Unstyled and compatible with any styling solution.
-                            </ListItem>
-                            <ListItem title="Animation" href="/docs/primitives/overview/animation">
-                                Use CSS keyframes or any animation library of your choice.
-                            </ListItem>
-                            <ListItem title="Accessibility" href="/docs/primitives/overview/accessibility">
-                                Tested in a range of browsers and assistive technologies.
-                            </ListItem>
-                            <ListItem title="Releases" href="/docs/primitives/overview/releases">
-                                Radix Primitives releases and their changelogs.
-                            </ListItem>
+                        <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 grid-cols-2">
+                            <li className="row-span-3 sm:grid hidden">
+                                <NavigationMenu.Link asChild>
+                                    <a
+                                        className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
+                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
+                                        href="/"
+                                    >
+                                        <img className=' h-full object-cover object-center rounded-lg ' src="/assets/PP-49a-420x420.jpg" alt="" />
+                                        {/* <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
+                                            {''}
+                                        </div>
+                                        <p className="text-mauve4 text-[14px] leading-[1.3] ">
+                                            {''}
+                                        </p> */}
+                                    </a>
+                                </NavigationMenu.Link>
+                            </li>
+                            {
+                                panjabiMenu.map((m, i) => {
+                                    const { id, title, body } = m;
+                                    return (<ListItem key={i} title={title} href={id}>
+                                        {body}
+                                    </ListItem>)
+                                })
+                            }
+                        </ul>
+                    </NavigationMenu.Content>
+                </NavigationMenu.Item>
+
+                <NavigationMenu.Item>
+                    <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_2px]">
+                        Panjabi{' '}
+                        <CaretDownIcon
+                            className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
+                            aria-hidden
+                        />
+                    </NavigationMenu.Trigger>
+                    <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
+                        <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 grid-cols-2">
+                            <li className="row-span-3 sm:grid hidden">
+                                <NavigationMenu.Link asChild>
+                                    <a
+                                        className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
+                    h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
+                                        href="/"
+                                    >
+                                        <img className=' h-full object-cover object-center rounded-lg ' src="/assets/COVER1-300x300.jpg.webp" alt="" />
+                                        {/* <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
+                                            {''}
+                                        </div>
+                                        <p className="text-mauve4 text-[14px] leading-[1.3] ">
+                                            {''}
+                                        </p> */}
+                                    </a>
+                                </NavigationMenu.Link>
+                            </li>
+                            {
+                                paijamaMenu.map((m, i) => {
+                                    const { id, title, body } = m;
+                                    return (<ListItem key={i} title={title} href={id}>
+                                        {body}
+                                    </ListItem>)
+                                })
+                            }
                         </ul>
                     </NavigationMenu.Content>
                 </NavigationMenu.Item>
 
                 <NavigationMenu.Item>
                     <NavigationMenu.Link
-                        className="text-violet11 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
-                        href="https://github.com/radix-ui"
+                        className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
+                        href="#"
                     >
-                        Github
+                        Watch
+                    </NavigationMenu.Link>
+                </NavigationMenu.Item>
+                <NavigationMenu.Item>
+                    <NavigationMenu.Link
+                        className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
+                        href="#"
+                    >
+                        Waistcoat
                     </NavigationMenu.Link>
                 </NavigationMenu.Item>
 
-                <NavigationMenu.Indicator className="data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full z-10 flex h-[10px] items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]">
-                    <div className="relative top-[70%] h-[10px] w-[10px] rotate-[45deg] rounded-tl-[2px] bg-white" />
-                </NavigationMenu.Indicator>
             </NavigationMenu.List>
 
             <div className="perspective-[2000px] absolute top-full left-0 flex w-full justify-center">
@@ -119,8 +201,8 @@ const ListItem = React.forwardRef(({ className, children, title, ...props }, for
                 {...props}
                 ref={forwardedRef}
             >
-                <div className="text-violet12 mb-[5px] font-medium leading-[1.2]">{title}</div>
-                <p className="text-mauve11 leading-[1.4]">{children}</p>
+                <div className="text-violet12 mb-[5px] font-semibold leading-[1.2]">{title}</div>
+                <p className="text-mauve12 leading-[1.4]">{children}</p>
             </a>
         </NavigationMenu.Link>
     </li>
