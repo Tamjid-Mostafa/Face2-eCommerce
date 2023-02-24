@@ -14,10 +14,10 @@ const inter = Inter({
 })
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
+    <>
       <div className={(sfPro.variable, inter.variable)}>
         <Component {...pageProps} />
       </div>
-    </Layout>
+    </>
   )
 }
