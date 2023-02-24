@@ -83,6 +83,10 @@ span.text-red {
   font-size: 18px;
 }
 
+.collection-text {
+  border: 3px solid white;
+}
+
 .cart-icon {
   font-size: 25px;
   color: gray;
@@ -872,5 +876,6 @@ span.text-red {
   .btn-container {
     width: 300px;
     margin: auto;
+
   }
 }
