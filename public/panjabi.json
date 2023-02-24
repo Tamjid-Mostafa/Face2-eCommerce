@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Panjabi-1",
+        "image": "https://i.ibb.co/rmQVN2s/panjabi-1.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Panjabi-2",
+        "image": "https://i.ibb.co/4V0kxvF/panjabi-3.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Panjabi-3",
+        "image": "https://i.ibb.co/TmjTMhz/panjabi-6.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Panjabi-4",
+        "image": "https://i.ibb.co/pzyTPvx/panjabi-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Panjabi-5",
+        "image": "https://i.ibb.co/MRh74rH/panjabi-9.jpg",
+        "price": "999"
+    }
+]
