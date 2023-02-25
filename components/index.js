@@ -6,3 +6,4 @@ export { default as HeroBanner } from './HeroBanner'
 export { default as Cart } from './Cart'
 export { default as HomeCollection } from './HomeCollection'
 export { default as HomeWaistcoat } from './HomeWaistcoat';
+export { default as HomeCollectionTwo } from './HomeCollectionTwo'

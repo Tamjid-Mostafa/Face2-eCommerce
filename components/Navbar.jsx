@@ -4,7 +4,6 @@ import {
     FADE_UP_ANIMATION_VARIANTS,
 } from '@/lib/constants'
 import useScroll from '@/lib/hooks/use-scroll'
-
 import Tooltip from '@/shared/tooltip'
 import { HeartIcon } from '@radix-ui/react-icons'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -12,7 +11,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
-import HeaderMini from './HeaderMini'
 import NavMenu from './NavMenu'
 import PopCart from './PopCart'
 
