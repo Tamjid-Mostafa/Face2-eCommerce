@@ -15,7 +15,7 @@ export default function HomeCollection() {
             <div className='flex flex-col'>
                 <div className='h-[450px]'>
                     <Link href="">
-                        <img className='h-full w-full' src="https://i.ibb.co/QCN3nsd/men.jpg" alt="" />
+                        <img className='h-full w-full' src="https://i.ibb.co/yXbycrR/men-1.jpg" alt="" />
                         <div className='-mt-20 ml-7'>
                             <h2 className='uppercase font-bold text-white'>men's collection</h2>
                         </div>
