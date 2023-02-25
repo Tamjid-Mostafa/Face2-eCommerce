@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaShoppingBag } from 'react-icons/fa'
 
@@ -5,8 +6,9 @@ const ProductCard = ({ product }) => {
   const { name, image, price } = product
 
   return (
+    <Link href="">
     <div
-      className="h-[500px] hover:border-[1px] duration-200 ease-in hover:border-black relative group"
+      className="h-[500px] hover:border-[1px] duration-200 ease-in hover:border-black relative group cursor-pointer" 
       style={{
         backgroundImage: `url(${image})`,
         backgroundRepeat: 'no-repeat',
@@ -26,6 +28,7 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
     </div>
+    </Link>
   )
 }
 

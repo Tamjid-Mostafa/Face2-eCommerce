@@ -53,7 +53,7 @@ export default function HeroBanner() {
         <div className='h-[600px] lg:h-[100vh] w-full m-auto  relative group'>
             <div
                 style={{
-                    background: `url(${slides[currentSlide].image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"
+                    backgroundImage: `url(${slides[currentSlide].image})`, backgroundRepeat:"no-repeat", backgroundSize: "cover", backgroundPosition: "center"
                 }}
                 className="w-full h-full  bg-center bg-cover duration-500 text-center items-center text-white">
                 <div className="md:w-[70%] mx-auto pt-32 ">
