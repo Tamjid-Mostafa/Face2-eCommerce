@@ -12,7 +12,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
-import HeaderMini from './HeaderMini'
 import NavMenu from './NavMenu'
 import PopCart from './PopCart'
 
