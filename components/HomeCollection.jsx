@@ -8,7 +8,7 @@ export default function HomeCollection() {
                 <Link href="">
                     <img className='h-full w-full' src="https://i.ibb.co/hYvBW7j/panjabi.jpg" alt="" />
                     <div className='-mt-20 ml-7'>
-                        <h2 className='uppercase font-semibold text-white'>Panjabi's collection</h2>
+                        <h2 className='uppercase font-bold text-white'>Panjabi's collection</h2>
                     </div>
                 </Link>
             </div>
@@ -17,7 +17,7 @@ export default function HomeCollection() {
                     <Link href="">
                         <img className='h-full w-full' src="https://i.ibb.co/QCN3nsd/men.jpg" alt="" />
                         <div className='-mt-20 ml-7'>
-                            <h2 className='uppercase font-semibold text-white'>men's collection</h2>
+                            <h2 className='uppercase font-bold text-white'>men's collection</h2>
                         </div>
                     </Link>
                 </div>
@@ -25,7 +25,7 @@ export default function HomeCollection() {
                     <Link href="">
                         <img className='h-full w-full' src="https://i.ibb.co/4ScqZBv/women.jpg" alt="" />
                         <div className='-mt-20 ml-7'>
-                            <h2 className='uppercase font-semibold text-white collection-text'>women's collection</h2>
+                            <h2 className='uppercase font-bold text-white collection-text'>women's collection</h2>
                         </div>
                     </Link>
                 </div>
