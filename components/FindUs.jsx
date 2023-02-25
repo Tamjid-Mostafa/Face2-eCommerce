@@ -41,8 +41,8 @@ const FindUs = () => {
             <h1 className="text-4xl text-center font-semibold uppercase">find us</h1>
             <div className='grid grid-cols-5 gap-5 mt-14 px-[5%]'>
                 {
-                    outlets.map( (outlet, i) => (
-                        <div key={i} className={`font-semibold ${outlets.length -1 == i ? "" : "border-dotted border-r-2 pr-2"}`}>
+                    outlets.map((outlet, i) => (
+                        <div key={i} className={`font-semibold ${outlets.length - 1 == i ? "" : "border-dotted border-r-2 pr-2"}`}>
                             <h1 className={`text-xl font-semibold my-3`}>{outlet.name}</h1>
                             <p className='text-justify'>{outlet.location}</p>
                             <p className='my-2'>Tel : {outlet.phone}</p>
@@ -52,7 +52,7 @@ const FindUs = () => {
                 }
             </div>
             <span className="flex justify-center mt-10">
-                <Link href={``} className='py-2 px-10 font-semibold border-2'>See All </Link>
+                <Link href={``} className='py-2 px-10 font-semibold border-2 hover:bg-white hover:text-black duration-700'>See All </Link>
             </span>
         </div>
     );

@@ -13,7 +13,7 @@ const NewsLetter = () => {
                 <Collapsible.Content>
                     <div className='flex justify-center border-2 w-[350px] mx-auto mt-10 pl-4 duration-700'>
                         <input className="w-full outline-none" placeholder="Enter Your email here" type=" text" />
-                        <button className='bg-black text-white py-2 px-5'>Subscribe</button>
+                        <button className='bg-black hover:bg-red-600 duration-500 text-white py-2 px-5'>Subscribe</button>
                     </div>
 
                 </Collapsible.Content>
