@@ -2,9 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
-import Header from '../Header'
 import Meta from './meta'
 import { useSignInModal } from '../sign-in-modal'
+import { Navbar } from '..'
 
 const Layout = ({ children, meta }) => {
     const router = useRouter()
@@ -15,7 +15,8 @@ const Layout = ({ children, meta }) => {
             <SignInModal />
             <div className="bg-gradient-to-br from-indigo-50 via-white to-cyan-100">
                 {router.pathname !== '/404' && (
-                    <Header setShowSignInModal={setShowSignInModal} />
+                    // <Header setShowSignInModal={setShowSignInModal} />
+                    <Navbar></Navbar>
                 )}
                 {children}
                 {router.pathname !== '/404' && (

@@ -12,7 +12,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
-import HeaderMini from './HeaderMini'
 import NavMenu from './NavMenu'
 import PopCart from './PopCart'
 
@@ -105,7 +104,7 @@ const Navbar = () => {
             </div>
             <>
                 <div className={`
-                    ${scrolled ? "fixed top-0 border-b border-gray-200 bg-primary/5 backdrop-blur-xl " : "hidden"}
+                    ${scrolled ? "fixed top-0 border-b border-gray-200 bg-primary" : "hidden"}
                      w-full duration-300  transition-all z-30`}>
                     <AnimatePresence>
                         <motion.div
