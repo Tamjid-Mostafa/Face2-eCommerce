@@ -13,9 +13,9 @@ const ScrollLockNav = ({ scrolled }) => {
 
             <div className={`
                     ${scrolled ? "fixed top-0 border-b border-gray-200 bg-primary" : "hidden"}
-                     w-full duration-300  transition-all z-10`}>
+                     w-full z-10 animate-enterFromTop `}>
                 <motion.div
-                    className={`mx-5 flex h-10 max-w-screen-xl items-center justify-between xl:mx-auto`}
+                    className={`flex h-10 max-w-screen-xl items-center justify-between xl:mx-auto`}
                     {...FADE_UP_ANIMATION_VARIANTS}
                 >
                     <NavMenu />

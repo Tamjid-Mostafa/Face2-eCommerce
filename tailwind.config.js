@@ -31,6 +31,14 @@ module.exports = {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
       },
       keyframes: {
+        enterFromTop: {
+          from: { opacity: 0, transform: 'translateY(-200px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
+        },
+        enterFromBottom: {
+          from: { opacity: 1, transform: 'translateY(200px)' },
+          to: { opacity: 0, transform: 'translateY(0)' },
+        },
         enterFromRight: {
           from: { opacity: 0, transform: 'translateX(200px)' },
           to: { opacity: 1, transform: 'translateX(0)' },
@@ -71,6 +79,8 @@ module.exports = {
       fadeIn: 'fadeIn 200ms ease',
       fadeOut: 'fadeOut 200ms ease',
       enterFromLeft: 'enterFromLeft 250ms ease',
+      enterFromTop: 'enterFromTop 300ms ease-in',
+      enterFromBottom: 'enterFromBottom 300ms ease-in',
       enterFromRight: 'enterFromRight 250ms ease',
       exitToLeft: 'exitToLeft 250ms ease',
       exitToRight: 'exitToRight 250ms ease',
