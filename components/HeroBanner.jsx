@@ -51,7 +51,7 @@ export default function HeroBanner() {
     // }, 5000);
     return (
         <div className='h-[600px] lg:h-[100vh] w-full m-auto  relative group'>
-            <Link href="">
+            <>
                 <div
                     style={{
                         backgroundImage: `url(${slides[currentSlide].image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"
@@ -65,7 +65,7 @@ export default function HeroBanner() {
                         </div>
                     </div>
                 </div>
-            </Link>
+            </>
 
             {/* left arrow */}
             <Tooltip content="Previous">

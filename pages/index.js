@@ -6,17 +6,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ meta }) {
   return (
-    <Layout>
+    <>
       <Meta {...meta} />
       <main>
         <HeroBanner />
-        <HomeCollection></HomeCollection>
+        <HomeCollection />
         <HomeWaistcoat></HomeWaistcoat>
         <Product></Product>
         <HomeCollectionTwo></HomeCollectionTwo>
         <FindUs></FindUs>
-        <NewsLetter></NewsLetter>
+        <NewsLetter />
       </main >
-    </Layout >
+    </ >
   )
 }
