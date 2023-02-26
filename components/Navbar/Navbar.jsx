@@ -27,7 +27,7 @@ const Navbar = () => {
 
             {/*  <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 -z-10" />
             <HeaderMini /> */}
-            <div className={`  z-30 transition-all `}>
+            <div className={`  z-10 transition-all `}>
                 <div
                     className={`flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto `}
                 >
