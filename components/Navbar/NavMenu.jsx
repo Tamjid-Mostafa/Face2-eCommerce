@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
-import { menMenu, paijamaMenu, panjabiMenu, womenMenu } from './constants';
+import { menMenu, paijamaMenu, panjabiMenu, womenMenu } from '../constants';
 import Link from 'next/link';
 
 const NavMenu = ({ className }) => {

@@ -5,4 +5,7 @@
     "prettier.jsxSingleQuote": true,
     "prettier.trailingComma": "none",
     "javascript.preferences.quoteStyle": "single",
+    "cSpell.words": [
+      "tailwindcss"
+    ],
   }
