@@ -14,6 +14,7 @@ import { FaSearch } from 'react-icons/fa'
 import NavMenu from './NavMenu'
 import PopCart from '../PopCart'
 import ScrollLockNav from './ScrollLockNav'
+import ThemeSwitcher from '../ui/ThemeSwitcher'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
@@ -68,6 +69,19 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div>
+
+                    </div>
+                    <div className='flex items-center justify-between space-x-2'>
+                        <AnimatePresence>
+                            <Tooltip content="Cart">
+                                <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
+
+                                    <ThemeSwitcher />
+
+                                </motion.div>
+
+                            </Tooltip>
+                        </AnimatePresence>
                         <AnimatePresence>
                             <Tooltip content="Cart">
                                 <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
@@ -78,9 +92,6 @@ const Navbar = () => {
 
                             </Tooltip>
                         </AnimatePresence>
-                    </div>
-                    <div className='flex items-center justify-between gap-2'>
-
                         <AnimatePresence>
                             <Tooltip content="Wish List">
                                 <motion.button
