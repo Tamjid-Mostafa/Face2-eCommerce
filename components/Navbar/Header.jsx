@@ -8,7 +8,7 @@ import Link from 'next/link';
 import React from 'react'
 import { FaMapMarkerAlt, FaShoppingBag } from 'react-icons/fa';
 import NavMenu from './NavMenu';
-import { useSignInModal } from './sign-in-modal';
+import { useSignInModal } from '../sign-in-modal';
 
 const Header = () => {
     const scrolled = useScroll(50);
