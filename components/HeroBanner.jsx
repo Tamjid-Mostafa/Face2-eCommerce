@@ -51,21 +51,19 @@ export default function HeroBanner() {
     // }, 5000);
     return (
         <div className='h-[600px] lg:h-[100vh] w-full m-auto  relative group'>
-            <Link href="">
-                <div
-                    style={{
-                        backgroundImage: `url(${slides[currentSlide].image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"
-                    }}
-                    className="w-full h-full  bg-center bg-cover duration-500 text-center items-center text-white">
-                    <div className="md:w-[70%] mx-auto pt-32 ">
-                        {/* <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">{slides[currentSlide].heading}</h1>
+            <div
+                style={{
+                    backgroundImage: `url(${slides[currentSlide].image})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"
+                }}
+                className="w-full h-full  bg-center bg-cover duration-500 text-center items-center text-white">
+                <div className="md:w-[70%] mx-auto pt-32 ">
+                    {/* <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">{slides[currentSlide].heading}</h1>
                     <p className="md:text-md my-5">{slides[currentSlide].text}</p> */}
-                        <div className="flex justify-center absolute bottom-[15%] left-[25%] lg:left-[45%]">
-                            <Link href="" className='px-5 py-3 bg-cyan-400 rounded-3xl flex items-center justify-center w-44 uppercase font-bold'>Shop now <RxPinRight className='ml-2 text-2xl'></RxPinRight></Link>
-                        </div>
+                    <div className="flex justify-center absolute bottom-[15%] left-[25%] lg:left-[45%]">
+                        <Link href="" className='px-5 py-3 bg-cyan-400 rounded-3xl flex items-center justify-center w-44 uppercase font-bold'>Shop now <RxPinRight className='ml-2 text-2xl'></RxPinRight></Link>
                     </div>
                 </div>
-            </Link>
+            </div>
 
             {/* left arrow */}
             <Tooltip content="Previous">

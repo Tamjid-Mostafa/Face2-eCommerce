@@ -20,13 +20,13 @@ const NewsLetter = () => {
                 <div className='flex justify-center mt-5'>
 
                     <Collapsible.Trigger asChild>
-                        <button className="">
+                        <div className="">
                             {open ?
                                 <button className='py-2  px-10 font-semibold border-2 mx-auto hover:bg-black hover:text-white duration-500'>Subscribe </button>
                                 : <span className="text-center mt-10">
                                     <button className='py-2 px-10 font-semibold border-2 hover:bg-black hover:text-white duration-500'>Subscribe </button>
                                 </span>}
-                        </button>
+                        </div>
                     </Collapsible.Trigger>
                 </div>
 

@@ -9,3 +9,4 @@ export { default as FindUs } from './FindUs'
 export { default as HomeWaistcoat } from './HomeWaistcoat';
 export { default as NewsLetter } from './NewsLetter';
 export { default as HomeCollectionTwo } from './HomeCollectionTwo';
+export { default as HomeCollectionCard } from './HomeCollectionCard';
