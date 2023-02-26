@@ -1,12 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
-import Navbar from '../Navbar'
-import Header from '../Header'
 import Meta from './meta'
 import { useSignInModal } from '../sign-in-modal'
+import { Navbar } from '..'
 
 const Layout = ({ children, meta }) => {
     const router = useRouter()
@@ -21,7 +19,6 @@ const Layout = ({ children, meta }) => {
                 {children}
                 {router.pathname !== '/404' && (
                     <Footer />
-
                 )}
             </>
         </div>

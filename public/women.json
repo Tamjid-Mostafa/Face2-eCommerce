@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Women-1",
+        "image": "https://i.ibb.co/f0mHmTC/women-1.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-2",
+        "image": "https://i.ibb.co/pyftZ2s/women-2.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-3",
+        "image": "https://i.ibb.co/JxsZ6Lt/women-3.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-4",
+        "image": "https://i.ibb.co/GsqfCMz/women-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-5",
+        "image": "https://i.ibb.co/cFd3gNr/women-5.jpg",
+        "price": "999"
+    }
+]

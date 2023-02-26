@@ -2,6 +2,7 @@ import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 import { menMenu, paijamaMenu, panjabiMenu, womenMenu } from './constants';
+import Link from 'next/link';
 
 const NavMenu = ({ className }) => {
     return (
@@ -19,7 +20,7 @@ const NavMenu = ({ className }) => {
                         <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr] grid-cols-[0.75fr_0.75fr]">
                             <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
-                                    <a
+                                    <Link
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
                     h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
                                         href="/"
@@ -31,7 +32,7 @@ const NavMenu = ({ className }) => {
                                         <p className="text-mauve4 text-[14px] leading-[1.3] ">
                                             {''}
                                         </p> */}
-                                    </a>
+                                    </Link>
                                 </NavigationMenu.Link>
                             </li>
                             {
@@ -59,7 +60,7 @@ const NavMenu = ({ className }) => {
                         <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr] grid-cols-[0.75fr_0.75fr]">
                             <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
-                                    <a
+                                    <Link
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
                     h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
                                         href="/"
@@ -71,7 +72,7 @@ const NavMenu = ({ className }) => {
                                         <p className="text-mauve4 text-[14px] leading-[1.3] ">
                                             {''}
                                         </p> */}
-                                    </a>
+                                    </Link>
                                 </NavigationMenu.Link>
                             </li>
                             {
@@ -101,7 +102,7 @@ const NavMenu = ({ className }) => {
                         <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 grid-cols-2">
                             <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
-                                    <a
+                                    <Link
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
                     h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
                                         href="/"
@@ -113,7 +114,7 @@ const NavMenu = ({ className }) => {
                                         <p className="text-mauve4 text-[14px] leading-[1.3] ">
                                             {''}
                                         </p> */}
-                                    </a>
+                                    </Link>
                                 </NavigationMenu.Link>
                             </li>
                             {
@@ -140,7 +141,7 @@ const NavMenu = ({ className }) => {
                         <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3 grid-cols-2">
                             <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
-                                    <a
+                                    <Link
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
                     h-full w-full select-none flex-col justify-end rounded-[6px] bg-gradient-to-b  no-underline outline-none focus:shadow-[0_0_0_2px]"
                                         href="/"
@@ -152,7 +153,7 @@ const NavMenu = ({ className }) => {
                                         <p className="text-mauve4 text-[14px] leading-[1.3] ">
                                             {''}
                                         </p> */}
-                                    </a>
+                                    </Link>
                                 </NavigationMenu.Link>
                             </li>
                             {
@@ -196,7 +197,7 @@ const NavMenu = ({ className }) => {
 const ListItem = React.forwardRef(({ className, children, title, ...props }, forwardedRef) => (
     <li>
         <NavigationMenu.Link asChild>
-            <a
+            <Link
                 className=
                 'focus:shadow-[0_0_0_2px] focus:shadow-violet7 hover:bg-mauve3 block select-none rounded-[6px] p-3 text-[15px] leading-none no-underline outline-none transition-colors'
                 {...props}
@@ -204,7 +205,7 @@ const ListItem = React.forwardRef(({ className, children, title, ...props }, for
             >
                 <div className="text-violet12 mb-[5px] font-semibold leading-[1.2]">{title}</div>
                 <p className="text-mauve12 leading-[1.4]">{children}</p>
-            </a>
+            </Link>
         </NavigationMenu.Link>
     </li>
 ));
