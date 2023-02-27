@@ -19,15 +19,15 @@ const ThemeSwitcher = () => {
         >
           <button
             className={
-              'w-[125px] h-10 pl-2 pr-1 rounded-md border border-accent-2 flex items-center justify-between transition-colors ease-linear hover:border-accent-3 hover:shadow-sm'
+              ' h-10 pl-2 pr-1 rounded-md border border-accent-2 flex items-center justify-between transition-colors ease-linear hover:border-accent-3 hover:shadow-sm'
             }
             aria-label="Theme Switcher"
           >
             <span className="flex flex-shrink items-center">
               <ThemeIcon width={20} height={20} theme={theme} />
-              <span className={cn('capitalize leading-none ml-2')}>
+              {/* <span className={cn('capitalize leading-none ml-2')}>
                 {theme}
-              </span>
+              </span> */}
             </span>
             <span className="cursor-pointer">
               <ChevronRight
@@ -42,7 +42,7 @@ const ThemeSwitcher = () => {
           {themes.length && display ? (
             <div
               className={
-                'fixed shadow-lg right-0 top-12 mt-2 origin-top-right w-full h-full outline-none bg-accent-0 z-40 lg:absolute lg:border lg:border-accent-1 lg:shadow-lg lg:w-56 lg:h-auto'
+                'fixed shadow-lg right-0 top-12 mt-2 origin-top-right w-full h-full outline-none bg-primary rounded-md animate-fadeIn z-40 lg:absolute lg:border lg:border-accent-1 lg:shadow-lg lg:w-56 lg:h-auto'
               }
             >
               <div className="flex flex-row justify-end px-6">
@@ -58,7 +58,7 @@ const ThemeSwitcher = () => {
                 {themes.map((t) => (
                   <li key={t}>
                     <button
-                      className="flex w-full capitalize cursor-pointer px-6 py-3 transition ease-in-out duration-150 hover:bg-primary/50 leading-6 font-medium items-center hover:bg-accent-1"
+                      className="flex w-full capitalize cursor-pointer px-6 py-3 transition ease-in-out duration-150 hover:bg-white/50 leading-6 font-medium items-center hover:bg-accent-1"
                       role={'link'}
                       onClick={() => {
                         setTheme(t)
