@@ -21,7 +21,7 @@ import Searchbar from '../common/Searchbar'
 import Avatar from '../common/Avatar'
 
 const Navbar = () => {
-    const scrolled = useScroll(200)
+    const scrolled = useScroll(900)
     const [search, setSearch] = useState()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =

@@ -110,9 +110,6 @@ const Product = () => {
         </div>
         <Swiper
           slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
           breakpoints={{
             640: {
               slidesPerView: 2
@@ -131,8 +128,8 @@ const Product = () => {
           // pagination={{
           //   clickable: true,
           // }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          navigation={false}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
           {
