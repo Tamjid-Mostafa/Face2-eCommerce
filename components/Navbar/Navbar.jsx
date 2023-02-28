@@ -93,9 +93,9 @@ const Navbar = () => {
                             <>
                                 <Tooltip content="Cart">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
-                                        <Link href='/Cart'>
-                                            <PopCart />
-                                        </Link>
+
+                                        <PopCart />
+
                                     </motion.div>
 
                                 </Tooltip>

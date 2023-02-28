@@ -1,5 +1,6 @@
 import Button from '@/components/Button'
 import FavouriteButton from '@/components/FavouriteButton'
+import Image from 'next/image'
 import React from 'react'
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 
@@ -10,7 +11,7 @@ export default function ProductDetails() {
                 <div>
                     <img src="https://i.ibb.co/jLFK2Bg/female.jpg" alt="" />
                 </div>
-                <div className='my-10 lg:pt-32 lg:-ml-12 bg-gray-200 pl-11 text-black'>
+                <div className='my-10 lg:pt-32 lg:-ml-12 py-5 bg-gray-200 px-11 text-black'>
                     <h1 className="text-3xl font-bold uppercase leading-10">bloom cotton dress</h1>
                     <h3 className='text-2xl font-semibold leading-10'>$155</h3>
                     <p className='w-2/3 text-justify'>This dress is made ffrom white fabric and white cheetah-spot print fabric. It has a long narrow skirt that flares at at the bottom with a corset about the waist and short gathered sleeves.</p>
@@ -25,6 +26,7 @@ export default function ProductDetails() {
                         <Button></Button>
                         <FavouriteButton></FavouriteButton>
                     </div>
+                    <div className='w-full bg-slate-900 h-[1px] my-4'></div>
                     <div>
                         <h3 className="text-2xl font-semibold leading-9">
                             Details
@@ -38,6 +40,7 @@ export default function ProductDetails() {
                             <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />Delivery (5-7 days)</p>
                         </div>
                     </div>
+                    <div className='w-full bg-slate-900 h-[1px] my-4'></div>
                     <div>
                         <h3 className='text-2xl font-semibold leading-9'>Customer Service </h3>
                         <p className='w-2/3 text-justify'>Our online customer care team is available Monday through Friday, 10AM-6PM. We are closed on weekends and national holidays. Please contact us. We would happy to assist you.</p>
