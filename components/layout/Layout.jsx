@@ -5,10 +5,10 @@ import Footer from '../Footer'
 import Meta from './meta'
 import { Navbar } from '..'
 import Sidebar from '../ui/Sidebar'
-import { CartSidebarView } from '../cart'
 import Modal from '../ui/Modal'
 import LoginView from '../auth/LoginView'
 import { useUI } from '../ui/context'
+import CartSidebarView from '../cart/CartSidebarView'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
