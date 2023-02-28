@@ -6,11 +6,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { FaMapMarkerAlt, FaSearch, FaShoppingBag } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaShoppingBag } from 'react-icons/fa';
 import NavMenu from './NavMenu';
 
-const Header = ({ setShowSignInModal }) => {
-
+const Header = () => {
     const scrolled = useScroll(50);
     return (
         <>
@@ -18,7 +17,7 @@ const Header = ({ setShowSignInModal }) => {
                 className={`fixed top-0 w-full ${scrolled
                     ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl py-2"
                     : "bg-white/0 py-5"
-                    } z-30 transition-all`}
+                    } z-10 transition-all`}
             >
                 <div className="flex max-w-screen-xl items-start justify-between xl:mx-auto">
                     <div className='flex gap-2'>

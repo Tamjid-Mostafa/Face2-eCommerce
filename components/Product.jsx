@@ -82,15 +82,16 @@ const Product = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
           {
             panjabies.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
+              key={panjabi.name}
               product={panjabi}
             ></ProductCard></SwiperSlide>)
           }
@@ -120,9 +121,9 @@ const Product = () => {
             delay: 3500,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
@@ -159,9 +160,9 @@ const Product = () => {
             delay: 3500,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"

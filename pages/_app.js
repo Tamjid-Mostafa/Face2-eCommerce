@@ -1,23 +1,20 @@
-import { Layout } from '@/components'
-import '@/styles/globals.css'
-import localFont from '@next/font/local'
-import { Inter } from '@next/font/google'
+import { Layout } from '@/components';
+import '@/styles/globals.css';
+import { ManagedUIContext } from '@/components/ui/context';
+import { useEffect } from 'react';
 
-const sfPro = localFont({
-  src: '../styles/SF-Pro-Display-Medium.otf',
-  variable: '--font-sf',
-})
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-})
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    document.body.classList?.remove('loading');
+  }, []);
+
   return (
     <>
-      <div className={(sfPro.variable, inter.variable)}>
-        <Component {...pageProps} />
-      </div>
+      <ManagedUIContext>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ManagedUIContext>
     </>
-  )
+  );
 }
