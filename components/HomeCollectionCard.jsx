@@ -5,7 +5,7 @@ export default function HomeCollectionCard({ collection }) {
     const { name, image } = collection;
     return (
         <div>
-            <div className='h-[640px] mx-auto shadow-xl bg-cover bg-center transform duration-500 cursor-pointer group hover:scale-x-105' style={{
+            <div className='h-[640px] mx-auto shadow-xl bg-cover bg-center transform duration-500 cursor-pointer group hover:scale-x-105 overflow-hidden' style={{
                 backgroundImage: `url(${image})`
             }}>
                 < Link href="" >

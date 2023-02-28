@@ -27,12 +27,15 @@
     "lodash.random": "^3.2.0",
     "next": "13.1.6",
     "next-themes": "^0.2.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^8.0.1",
     "radix-ui": "^1.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-merge-refs": "^2.0.1",
-    "tabbable": "^6.1.1"
+    "tabbable": "^6.1.1",
+    "swiper": "^9.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

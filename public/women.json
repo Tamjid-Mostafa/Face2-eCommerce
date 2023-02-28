@@ -23,5 +23,30 @@
         "name": "Women-5",
         "image": "https://i.ibb.co/cFd3gNr/women-5.jpg",
         "price": "999"
+    },
+    {
+        "name": "Women-6",
+        "image": "https://i.ibb.co/f0mHmTC/women-1.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-7",
+        "image": "https://i.ibb.co/pyftZ2s/women-2.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-8",
+        "image": "https://i.ibb.co/JxsZ6Lt/women-3.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-9",
+        "image": "https://i.ibb.co/GsqfCMz/women-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Women-10",
+        "image": "https://i.ibb.co/cFd3gNr/women-5.jpg",
+        "price": "999"
     }
 ]

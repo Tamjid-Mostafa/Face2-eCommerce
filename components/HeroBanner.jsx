@@ -66,17 +66,17 @@ export default function HeroBanner() {
             </div>
 
             {/* left arrow */}
-            <Tooltip content="Previous">
+            <Tooltip Tooltip content="Previous" >
                 <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] left-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
                     <BsChevronCompactLeft onClick={prevSlide} size={30}></BsChevronCompactLeft>
                 </div>
             </Tooltip>
             {/* right arrow */}
-            <Tooltip content="Next">
+            <Tooltip Tooltip content="Next" >
                 <div className="hidden group-hover:block absolute top-[45%] -translate-x-0 translate-y-[50%] right-5 text-2xl bg-black/20 p-4 rounded-full text-white cursor-pointer">
                     <BsChevronCompactRight onClick={nextSlide} size={30}></BsChevronCompactRight>
                 </div>
-            </Tooltip>
+            </Tooltip >
 
             {/* dots */}
             {/* <div className="flex top-4 justify-center py-2">

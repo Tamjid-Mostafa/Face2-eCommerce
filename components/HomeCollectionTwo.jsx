@@ -28,7 +28,7 @@ export default function HomeCollectionTwo() {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
             {
                 collections.map(collection => <HomeCollectionCard
-                    id={collection.id}
+                    key={collection.id}
                     collection={collection}
                 />)
             }
