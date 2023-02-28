@@ -16,11 +16,15 @@ import PopCart from '../PopCart'
 import ScrollLockNav from './ScrollLockNav'
 import ThemeSwitcher from '../ui/ThemeSwitcher'
 import Header from './Header'
+import { useUI } from '../ui/context'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
     const [search, setSearch] = useState()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
+        useUI()
+
     return (
         <>
             <div
@@ -87,9 +91,12 @@ const Navbar = () => {
                             <>
                                 <Tooltip content="Cart">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
-                                        <Link href='/Cart'>
-                                            <PopCart />
-                                        </Link>
+                                        <button
+                                            onClick={() => openModal()}
+                                        >
+                                            Cart
+                                            {/* <PopCart /> */}
+                                        </button>
                                     </motion.div>
 
                                 </Tooltip>
