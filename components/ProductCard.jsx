@@ -19,8 +19,8 @@ const ProductCard = ({ product }) => {
         <div className="bg-gradient-to-r from-orange-300 to-amber-100 border-t-[1px] group-hover:border-black duration-500 absolute bottom-0 w-full hidden group-hover:block ">
           <div className='flex items-center justify-between'>
             <div className='w-full px-4 text-black'>
-              <Link href="/ProductDetails" className="text-md text font-semibold">{name}</Link>
-              <p>Price: {price} <span className='font-semibold text-xl'> ৳</span></p>
+              <h2 className="text-lg text ">{name}</h2>
+              <p>Price: ${price}</p>
             </div>
             <div className="hover:bg-black border-l-[1px] border-black py-5 w-20 hover:text-white duration-500">
               <FaShoppingBag className='text-xl mx-auto'></FaShoppingBag>
