@@ -16,11 +16,17 @@ import PopCart from '../PopCart'
 import ScrollLockNav from './ScrollLockNav'
 import ThemeSwitcher from '../ui/ThemeSwitcher'
 import Header from './Header'
+import { useUI } from '../ui/context'
+import Searchbar from '../common/Searchbar'
+import Avatar from '../common/Avatar'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
     const [search, setSearch] = useState()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
+        useUI()
+
     return (
         <>
             <div
@@ -94,6 +100,19 @@ const Navbar = () => {
 
                                 </Tooltip>
                             </>
+                            <>
+                                <Tooltip content="Cart">
+                                    <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
+                                        <button
+                                            onClick={() => openModal()}
+                                        >
+                                            <Avatar />
+                                        </button>
+                                    </motion.div>
+
+                                </Tooltip>
+                            </>
+
                             <>
                                 <Tooltip content="Wish List">
                                     <motion.button
@@ -182,7 +201,9 @@ const Navbar = () => {
                             <>
                                 <ul className="list-none lg:hidden flex gap-10 flex-col justify-center items-center w-full h-full font-poppins ">
                                     <li className="text-white">
-                                        Hello World
+                                        <div className="flex pb-4 lg:px-6 lg:hidden">
+                                            <Searchbar id="mobile-search" />
+                                        </div>
                                     </li>
                                     <li className="text-white">
                                         Hello World
