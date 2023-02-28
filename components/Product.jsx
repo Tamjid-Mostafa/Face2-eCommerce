@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css/navigation';
+import Link from 'next/link';
 
 
 
@@ -35,10 +36,10 @@ const Product = () => {
 
   return (
     <Tabs.Root
-      className="flex flex-col w-full"
+      className="flex flex-col w-full relative"
       defaultValue="panjabiTab"
     >
-      <Tabs.List className="shrink-0 flex border-b border-mauve6" aria-label="Manage your account">
+      <Tabs.List className="shrink-0 flex border-b border-mauve6 " aria-label="Manage your account">
         <Tabs.Trigger
           className="bg-white px-5 h-[45px]  flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-violet11 data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current   outline-none cursor-pointer focus:outline-none"
           value="panjabiTab"
@@ -62,6 +63,9 @@ const Product = () => {
         className="outline-none"
         value="panjabiTab"
       >
+        <div className='absolute top-[-12px] -translate-x-0 translate-y-[50%] right-5 px-5 py-1 text-black hover:bg-slate-600 hover:text-white duration-500 border-2 rounded'>
+          <Link href="/AllProducts" className=''>View All</Link>
+        </div>
         <Swiper
           slidesPerView={1}
           pagination={{
@@ -98,9 +102,12 @@ const Product = () => {
         </Swiper>
       </Tabs.Content>
       <Tabs.Content
-        className="grow p-5 bg-white rounded-b-md outline-none"
+        className="grow bg-white rounded-b-md outline-none"
         value="menTab"
       >
+        <div className='absolute top-[-12px] -translate-x-0 translate-y-[50%] right-5 px-5 py-1 text-black hover:bg-slate-600 hover:text-white duration-500 border-2 rounded'>
+          <Link href="/mens" className=''>View All</Link>
+        </div>
         <Swiper
           slidesPerView={1}
           pagination={{
@@ -137,9 +144,12 @@ const Product = () => {
         </Swiper>
       </Tabs.Content>
       <Tabs.Content
-        className="grow p-5 bg-white rounded-b-md outline-none"
+        className="grow bg-white rounded-b-md outline-none"
         value="womenTab"
       >
+        <div className='absolute top-[-12px] -translate-x-0 translate-y-[50%] right-5 px-5 py-1 text-black hover:bg-slate-600 hover:text-white duration-500 border-2 rounded'>
+          <Link href="/women's" className=''>View All</Link>
+        </div>
         <Swiper
           slidesPerView={1}
           pagination={{
@@ -174,7 +184,7 @@ const Product = () => {
           }
         </Swiper>
       </Tabs.Content>
-    </Tabs.Root>
+    </Tabs.Root >
 
 
   )
