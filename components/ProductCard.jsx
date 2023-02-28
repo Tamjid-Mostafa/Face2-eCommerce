@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
               <h4 className="text-lg text ">{name}</h4>
               <p>Price: ${price}</p>
             </div>
-            <div className="hover:bg-black py-5 w-20 hover:text-white duration-500">
+            <div className="hover:bg-black border-l-[1px] border-black py-5 w-20 hover:text-white duration-500">
               <FaShoppingBag className='text-xl mx-auto'></FaShoppingBag>
             </div>
           </div>
