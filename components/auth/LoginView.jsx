@@ -49,7 +49,7 @@ const LoginView = () => {
                 <button
                     variant="slim"
                     type="submit"
-                    loading={loading}
+                    loading={loading ? true : false}
                     disabled={disabled}
                 >
                     Log In

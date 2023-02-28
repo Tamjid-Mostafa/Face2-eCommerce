@@ -18,6 +18,7 @@ import ThemeSwitcher from '../ui/ThemeSwitcher'
 import Header from './Header'
 import { useUI } from '../ui/context'
 import Searchbar from '../common/Searchbar'
+import Avatar from '../common/Avatar'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
@@ -92,16 +93,26 @@ const Navbar = () => {
                             <>
                                 <Tooltip content="Cart">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
+                                        <Link href='/Cart'>
+                                            <PopCart />
+                                        </Link>
+                                    </motion.div>
+
+                                </Tooltip>
+                            </>
+                            <>
+                                <Tooltip content="Cart">
+                                    <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
                                         <button
                                             onClick={() => openModal()}
                                         >
-                                            Cart
-                                            {/* <PopCart /> */}
+                                            <Avatar />
                                         </button>
                                     </motion.div>
 
                                 </Tooltip>
                             </>
+
                             <>
                                 <Tooltip content="Wish List">
                                     <motion.button
