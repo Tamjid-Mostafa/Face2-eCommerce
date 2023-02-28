@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="bg-white border-t-[1px] group-hover:border-black duration-500 absolute bottom-0 w-full hidden group-hover:block ">
+        <div className="bg-gradient-to-r from-orange-300 to-amber-100 border-t-[1px] group-hover:border-black duration-500 absolute bottom-0 w-full hidden group-hover:block ">
           <div className='flex items-center justify-between'>
             <div className='w-full px-4 text-black'>
               <h2 className="text-lg text ">{name}</h2>

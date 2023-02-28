@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css/navigation';
 import Link from 'next/link';
 
@@ -68,29 +68,23 @@ const Product = () => {
         </div>
         <Swiper
           slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
           breakpoints={{
             640: {
               slidesPerView: 2
             },
             768: {
-              slidesPerView: 4
+              slidesPerView: 3
             },
             1024: {
-              slidesPerView: 5
+              slidesPerView: 4
             },
           }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          navigation={false}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
           {
@@ -106,13 +100,10 @@ const Product = () => {
         value="menTab"
       >
         <div className='absolute top-[-12px] -translate-x-0 translate-y-[50%] right-5 px-5 py-1 text-black hover:bg-slate-600 hover:text-white duration-500 border-2 rounded'>
-          <Link href="/mens" className=''>View All</Link>
+          <Link href="/AllProducts" className=''>View All</Link>
         </div>
         <Swiper
           slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
           breakpoints={{
             640: {
               slidesPerView: 2
@@ -128,11 +119,8 @@ const Product = () => {
             delay: 3500,
             disableOnInteraction: false,
           }}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          navigation={false}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
           {
@@ -148,13 +136,10 @@ const Product = () => {
         value="womenTab"
       >
         <div className='absolute top-[-12px] -translate-x-0 translate-y-[50%] right-5 px-5 py-1 text-black hover:bg-slate-600 hover:text-white duration-500 border-2 rounded'>
-          <Link href="/women's" className=''>View All</Link>
+          <Link href="/AllProducts" className=''>View All</Link>
         </div>
         <Swiper
           slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
           breakpoints={{
             640: {
               slidesPerView: 2
@@ -170,11 +155,8 @@ const Product = () => {
             delay: 3500,
             disableOnInteraction: false,
           }}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          navigation={false}
+          modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
           {
