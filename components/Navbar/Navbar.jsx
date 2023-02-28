@@ -101,7 +101,7 @@ const Navbar = () => {
                                 </Tooltip>
                             </>
                             <>
-                                <Tooltip content="Cart">
+                                <Tooltip content="Profile">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
                                         <button
                                             onClick={() => openModal()}
