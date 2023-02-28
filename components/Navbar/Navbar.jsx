@@ -17,6 +17,7 @@ import ScrollLockNav from './ScrollLockNav'
 import ThemeSwitcher from '../ui/ThemeSwitcher'
 import Header from './Header'
 import { useUI } from '../ui/context'
+import Searchbar from '../common/Searchbar'
 
 const Navbar = () => {
     const scrolled = useScroll(200)
@@ -189,7 +190,9 @@ const Navbar = () => {
                             <>
                                 <ul className="list-none lg:hidden flex gap-10 flex-col justify-center items-center w-full h-full font-poppins ">
                                     <li className="text-white">
-                                        Hello World
+                                        <div className="flex pb-4 lg:px-6 lg:hidden">
+                                            <Searchbar id="mobile-search" />
+                                        </div>
                                     </li>
                                     <li className="text-white">
                                         Hello World
