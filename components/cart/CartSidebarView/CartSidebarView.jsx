@@ -1,30 +1,26 @@
+import Button from '@/components/Button'
+import SidebarLayout from '@/components/common/SidebarLayout'
+import Cross from '@/components/layout/icons/Cross'
 import cn from 'clsx'
 import Link from 'next/link'
 import s from './CartSidebarView.module.css'
-import CartItem from '../CartItem'
-import { Button, Text } from '@components/ui'
-import { useUI } from '@components/ui/context'
-import { Bag, Cross, Check } from '@components/icons'
-import useCart from '@framework/cart/use-cart'
-import usePrice from '@framework/product/use-price'
-import SidebarLayout from '@components/common/SidebarLayout'
 
 const CartSidebarView = () => {
   const { closeSidebar, setSidebarView } = useUI()
   // const { data, isLoading, isEmpty } = useCart()
 
-  const { price: subTotal } = usePrice(
-    data && {
-      amount: Number(data.subtotalPrice),
-      currencyCode: data.currency.code,
-    }
-  )
-  const { price: total } = usePrice(
-    data && {
-      amount: Number(data.totalPrice),
-      currencyCode: data.currency.code,
-    }
-  )
+  // const { price: subTotal } = usePrice(
+  //   data && {
+  //     amount: Number(data.subtotalPrice),
+  //     currencyCode: data.currency.code,
+  //   }
+  // )
+  // const { price: total } = usePrice(
+  //   data && {
+  //     amount: Number(data.totalPrice),
+  //     currencyCode: data.currency.code,
+  //   }
+  // )
   const handleClose = () => closeSidebar()
   const goToCheckout = () => setSidebarView('CHECKOUT_VIEW')
 
@@ -41,7 +37,7 @@ const CartSidebarView = () => {
       {isLoading || isEmpty ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-dashed border-primary rounded-full flex items-center justify-center w-16 h-16 p-12 bg-secondary text-secondary">
-            <Bag className="absolute" />
+            {/* <Bag className="absolute" /> */}
           </span>
           <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
             Your cart is empty
@@ -63,7 +59,7 @@ const CartSidebarView = () => {
       ) : success ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-white rounded-full flex items-center justify-center w-16 h-16">
-            <Check />
+            {/* <Check /> */}
           </span>
           <h2 className="pt-6 text-xl font-light text-center">
             Thank you for your order.
@@ -73,9 +69,9 @@ const CartSidebarView = () => {
         <>
           <div className="px-4 sm:px-6 flex-1">
             <Link href="/cart">
-              <Text variant="sectionHeading" onClick={handleClose}>
+              {/* <Text variant="sectionHeading" onClick={handleClose}>
                 My Cart
-              </Text>
+              </Text> */}
             </Link>
             <ul className={s.lineItemsList}>
               {/* {data!.lineItems.map((item: any) => (
