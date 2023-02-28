@@ -6,9 +6,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-
-    // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -89,8 +86,8 @@ module.exports = {
 
   plugins: [
     plugin(({ addVariant }) => {
-      addVariant("radix-side-top", '&[data-side="top"]');
-      addVariant("radix-side-bottom", '&[data-side="bottom"]');
+      addVariant('radix-side-top', '&[data-side="top"]')
+      addVariant('radix-side-bottom', '&[data-side="bottom"]')
     }),
   ],
 }
