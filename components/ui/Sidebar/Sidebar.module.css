@@ -1,9 +1,9 @@
 .root {
-  @apply fixed inset-0 h-full z-50 box-border outline-none;
+  @apply fixed inset-0 z-50 box-border h-full outline-none;
 }
 
 .sidebar {
-  @apply h-full flex flex-col text-base bg-accent-0 shadow-xl overflow-y-auto overflow-x-hidden;
+  @apply flex h-full flex-col overflow-y-auto overflow-x-hidden bg-accent-0 text-base shadow-xl;
   -webkit-overflow-scrolling: touch !important;
 }
 
