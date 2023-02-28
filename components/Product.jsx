@@ -1,7 +1,11 @@
-
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import * as Tabs from '@radix-ui/react-tabs';
 import ProductCard from './ProductCard';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import 'swiper/css/navigation';
 
 
 
@@ -27,6 +31,8 @@ const Product = () => {
       .then(res => res.json())
       .then(data => setMensCollections(data))
   }, [])
+
+
   return (
     <Tabs.Root
       className="flex flex-col w-full"
@@ -56,40 +62,117 @@ const Product = () => {
         className="outline-none"
         value="panjabiTab"
       >
-        <div className='grid grid-cols-5'>
+        <Swiper
+          slidesPerView={1}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 4
+            },
+            1024: {
+              slidesPerView: 5
+            },
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
           {
-            panjabies.map(panjabi => <ProductCard
+            panjabies.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
               key={panjabi.name}
               product={panjabi}
-            ></ProductCard>)
+            ></ProductCard></SwiperSlide>)
           }
-        </div>
+        </Swiper>
       </Tabs.Content>
       <Tabs.Content
         className="grow p-5 bg-white rounded-b-md outline-none"
         value="menTab"
       >
-        <div className='grid grid-cols-5'>
+        <Swiper
+          slidesPerView={1}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 4
+            },
+            1024: {
+              slidesPerView: 5
+            },
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
           {
-            mensCollections.map(mens => <ProductCard
-              key={mens.name}
-              product={mens}
-            ></ProductCard>)
+            mensCollections.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
+
+              product={panjabi}
+            ></ProductCard></SwiperSlide>)
           }
-        </div>
+        </Swiper>
       </Tabs.Content>
       <Tabs.Content
         className="grow p-5 bg-white rounded-b-md outline-none"
         value="womenTab"
       >
-        <div className='grid grid-cols-5'>
+        <Swiper
+          slidesPerView={1}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2
+            },
+            768: {
+              slidesPerView: 4
+            },
+            1024: {
+              slidesPerView: 5
+            },
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
           {
-            womensCollections.map(women => <ProductCard
-              key={women.name}
-              product={women}
-            ></ProductCard>)
+            womensCollections.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
+              product={panjabi}
+            ></ProductCard></SwiperSlide>)
           }
-        </div>
+        </Swiper>
       </Tabs.Content>
     </Tabs.Root>
 

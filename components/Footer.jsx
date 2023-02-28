@@ -25,28 +25,28 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 pt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-20'>
         <div className='p-3'>
 
           <Image src={logo} width={200} alt="" className='mx-auto' />
 
           <p className='text-justify mt-5'>We provide the finest  lifestyle product which is crafted and designed by the professionals with great care and 100% halal material.</p>
         </div>
-        <div className='ml-0 lg:ml-10'>
+        <div className='ml-3 lg:ml-10'>
           <h2 className="text-2xl font-semibold ">Shopping Information</h2>
           <ul className='mt-10'>
             {shoppingInfo.map((info) => <li key={info.name} className="py-1"><Link href={info.link} className="font-semibold hover:underline">{info.name}</Link></li>)}
           </ul>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold ">Information</h2>
+        <div className='ml-3 lg:ml-0'>
+          <h2 className="text-2xl  font-semibold ">Information</h2>
           <ul className='mt-10'>
             {information.map((info) => <li key={info.name} className="py-1 "><Link href={info.link} className=" font-semibold hover:underline" >{info.name}</Link></li>)}
           </ul>
 
         </div>
-        <div>
+        <div className='ml-3 lg:ml-0'>
           <h2 className="text-2xl font-semibold mb-10">Contacts</h2>
 
           <div>

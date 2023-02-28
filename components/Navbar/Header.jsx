@@ -8,14 +8,11 @@ import Link from 'next/link';
 import React from 'react'
 import { FaMapMarkerAlt, FaShoppingBag } from 'react-icons/fa';
 import NavMenu from './NavMenu';
-import { useSignInModal } from '../sign-in-modal';
 
 const Header = () => {
     const scrolled = useScroll(50);
-    const { SignInModal, setShowSignInModal } = useSignInModal()
     return (
         <>
-            <SignInModal />
             <div
                 className={`fixed top-0 w-full ${scrolled
                     ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl py-2"
