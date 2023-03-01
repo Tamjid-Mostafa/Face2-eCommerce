@@ -5,12 +5,17 @@ import { HeartIcon, MagnifyingGlassIcon, PersonIcon } from '@radix-ui/react-icon
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react'
 import { FaMapMarkerAlt, FaShoppingBag } from 'react-icons/fa';
+import Avatar from '../common/Avatar';
+import { useUI } from '../ui/context';
 import NavMenu from './NavMenu';
 
 const Header = () => {
     const scrolled = useScroll(50);
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
+        useUI()
     return (
         <>
             <div
@@ -46,7 +51,7 @@ const Header = () => {
                     </Link>
 
                     <div className='flex gap-2'>
-                        <AnimatePresence>
+                        <>
                             <Tooltip content="Search">
                                 <motion.button
                                     className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
@@ -54,9 +59,9 @@ const Header = () => {
                                     <MagnifyingGlassIcon />
                                 </motion.button>
                             </Tooltip>
-                        </AnimatePresence>
+                        </>
 
-                        <AnimatePresence>
+                        <>
                             <Tooltip content="Store Location">
                                 <motion.button
                                     className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
@@ -65,18 +70,18 @@ const Header = () => {
                                 </motion.button>
                             </Tooltip>
 
-                        </AnimatePresence>
-                        <AnimatePresence>
+                        </>
+                        <>
                             <Tooltip content="Profile">
                                 <motion.button
-                                    onClick={() => setShowSignInModal(true)}
+                                    onClick={() => openModal()}
                                     className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
                                     {...FADE_IN_ANIMATION_SETTINGS}>
-                                    <PersonIcon />
+                                    <Avatar />
                                 </motion.button>
                             </Tooltip>
-                        </AnimatePresence>
-                        <AnimatePresence>
+                        </>
+                        <>
                             <Tooltip content="Cart">
                                 <motion.button
                                     className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
@@ -84,7 +89,7 @@ const Header = () => {
                                     <FaShoppingBag />
                                 </motion.button>
                             </Tooltip>
-                        </AnimatePresence>
+                        </>
                     </div>
                 </div>
                 <div>
