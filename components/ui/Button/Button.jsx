@@ -1,13 +1,11 @@
 import cn from 'clsx'
 import React, {
   forwardRef,
-  ButtonHTMLAttributes,
-  JSXElementConstructor,
   useRef,
 } from 'react'
 import { mergeRefs } from 'react-merge-refs'
-import LoadingDots from '../LoadingDots'
 import s from './Button.module.css'
+import LoadingDots from '../LoadingDots'
 
 
 // eslint-disable-next-line react/display-name
