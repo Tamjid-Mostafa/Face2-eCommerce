@@ -9,6 +9,7 @@ import Modal from '../ui/Modal'
 import LoginView from '../auth/LoginView'
 import { useUI } from '../ui/context'
 import CartSidebarView from '../cart/CartSidebarView'
+import Header from '../Navbar/Header'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -60,7 +61,7 @@ const Layout = ({ children, meta }) => {
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (
-                    <Navbar />
+                    <Header />
                 )}
                 {children}
                 {router.pathname !== '/404' && (
