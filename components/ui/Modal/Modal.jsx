@@ -1,4 +1,5 @@
 import Cross from '@/components/layout/icons/Cross'
+import s from './Modal.module.css'
 import FocusTrap from '@/lib/focus-trap'
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock'
 import { useRef, useEffect, useCallback } from 'react'
@@ -32,12 +33,12 @@ const Modal = ({ children, onClose }) => {
   }, [handleKey])
 
   return (
-    <div className="fixed bg-black bg-opacity-40 flex items-center inset-0 z-50 justify-center">
-      <div className="bg-primary p-12 border border-accent-2 relative focus:outline-none" role="dialog" ref={ref}>
+    <div className={s.root}>
+      <div className={s.modal} role="dialog" ref={ref}>
         <button
           onClick={() => onClose()}
           aria-label="Close panel"
-          className="hover:text-accent-5 transition ease-in-out duration-150 focus:outline-none absolute right-0 top-0 m-6"
+          className={s.close}
         >
           <Cross className="h-6 w-6" />
         </button>
