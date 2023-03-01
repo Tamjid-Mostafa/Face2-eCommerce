@@ -5,11 +5,13 @@ import Footer from '../Footer'
 import Meta from './meta'
 import { Navbar } from '..'
 import Sidebar from '../ui/Sidebar'
-import Modal from '../ui/Modal'
 import LoginView from '../auth/LoginView'
 import { useUI } from '../ui/context'
 import CartSidebarView from '../cart/CartSidebarView'
 import Header from '../Navbar/Header'
+import dynamic from 'next/dynamic'
+import Modal from '../ui/Modal'
+import LoadingDots from '../ui/LoadingDots'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -33,6 +35,28 @@ const SidebarUI = ({ links }) => {
         />
     ) : null
 }
+const Loading = () => (
+    <div className="w-80 h-80 flex items-center text-center justify-center p-3">
+        <LoadingDots />
+    </div>
+)
+const dynamicProps = {
+    loading: Loading,
+}
+const SignUpView = dynamic(() => import('../auth/SignUpView'), {
+    ...dynamicProps,
+})
+
+const ForgotPassword = dynamic(
+    () => import('../auth/ForgotPassword'),
+    {
+        ...dynamicProps,
+    }
+)
+// const Modal = dynamic(() => import('@components'), {
+//     ...dynamicProps,
+//     ssr: false,
+// })
 const ModalView = ({
     modalView,
     closeModal,
@@ -40,8 +64,8 @@ const ModalView = ({
     return (
         <Modal onClose={closeModal}>
             {modalView === 'LOGIN_VIEW' && <LoginView />}
-            {/* {modalView === 'SIGNUP_VIEW' && <SignUpView />}
-        {modalView === 'FORGOT_VIEW' && <ForgotPassword />} */}
+            {modalView === 'SIGNUP_VIEW' && <SignUpView />}
+            {modalView === 'FORGOT_VIEW' && <ForgotPassword />}
         </Modal>
     )
 }
