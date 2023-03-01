@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FC, useEffect, useState, useCallback } from 'react'
-import Button from '../Button'
 import Info from '../layout/icons/Info'
+import Button from '../ui/Button'
 import { useUI } from '../ui/context'
 import Input from '../ui/Input'
 
