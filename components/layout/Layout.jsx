@@ -85,7 +85,7 @@ const Layout = ({ children, meta }) => {
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (
-                    <Header />
+                    <Navbar />
                 )}
                 {children}
                 {router.pathname !== '/404' && (
