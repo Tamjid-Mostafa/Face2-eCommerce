@@ -76,6 +76,7 @@ body {
   background-color: var(--primary);
   color: var(--text-primary);
   overscroll-behavior-x: none;
+  font-family: 'Noto Rashi Hebrew', serif;
 }
 
 body {
