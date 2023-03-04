@@ -1,6 +1,6 @@
 import { Inter } from '@next/font/google'
 import Meta from '@/components/layout/meta'
-import { HeroBanner, HomeCollection, HomeWaistcoat, Layout, Product, FindUs, NewsLetter, HomeCollectionTwo } from '@/components'
+import { HeroBanner, HomeCollection, HomeWaistcoat, Layout, Product, FindUs, NewsLetter, HomeCollectionTwo, WaistcoatHome } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,11 +11,13 @@ export default function Home({ meta }) {
       <main>
         <HeroBanner />
         <HomeCollection />
-        <HomeWaistcoat></HomeWaistcoat>
+
         <Product></Product>
         <HomeCollectionTwo></HomeCollectionTwo>
-        <FindUs></FindUs>
-        <NewsLetter />
+        {/* <FindUs></FindUs>
+        <NewsLetter /> */}
+        <HomeWaistcoat />
+        <WaistcoatHome />
       </main >
     </ >
   )

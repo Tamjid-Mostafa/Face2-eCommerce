@@ -4,13 +4,15 @@ import React from 'react'
 
 export default function HomeWaistcoat() {
     return (
-        <div className='h-[500px] duration-500 ease-in hover:border-black hover:scale-x-105'>
-            <Link href="">
-                <img className='h-full w-full' src="https://i.ibb.co/JnjZ13d/mens-suit-vest-guide-1080x675.jpg" alt="" />
-                <div className='-mt-20 ml-10'>
-                    <h2 className='uppercase font-bold text-white'>Waistcoat Collection</h2>
-                </div>
-            </Link>
-        </div>
+        <div className='mt-12 grid grid-cols-2 gap-1'>
+            <div className=''>
+                <img className="h-[450px]" src=" https://i.ibb.co/1MkMkjz/waistcoat-banner-1.jpg" alt="" />
+                <div className="text-center group my-3"><Link href={``} >Waistcoat <span className='ml-3 text-xl font-bold group-hover:ml-5 duration-300'>{">>"}</span></Link></div>
+            </div>
+            <div>
+                <img className="h-[450px]" src=" https://i.ibb.co/3hpQXBM/waistcoat-banner-2.jpg" alt="" />
+                <div className="text-center group my-3"><Link href={``} >Waistcoat <span className='ml-3 text-xl font-bold group-hover:ml-5 duration-300'>{">>"}</span></Link></div>
+            </div>
+        </div >
     )
 }

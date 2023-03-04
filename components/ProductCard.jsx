@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaShoppingBag } from 'react-icons/fa'
 
 const ProductCard = ({ product }) => {
   const { name, image, price } = product
@@ -8,7 +7,7 @@ const ProductCard = ({ product }) => {
   return (
     <Link href="/ProductDetails">
       <div
-        className="h-[500px] hover:border-[1px] duration-200 ease-in hover:border-black relative group cursor-pointer"
+        className="h-[500px] hover:border-[1px] duration-200 ease-in relative group cursor-pointer"
         style={{
           backgroundImage: `url(${image})`,
           backgroundRepeat: 'no-repeat',
@@ -16,17 +15,10 @@ const ProductCard = ({ product }) => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="bg-gradient-to-r from-orange-300 to-amber-100 border-t-[1px] group-hover:border-black duration-500 absolute bottom-0 w-full hidden group-hover:block ">
-          <div className='flex items-center justify-between'>
-            <div className='w-full px-4 text-black'>
-              <h2 className="text-lg text ">{name}</h2>
-              <p>Price: ${price}</p>
-            </div>
-            <div className="hover:bg-black border-l-[1px] border-black py-5 w-20 hover:text-white duration-500">
-              <FaShoppingBag className='text-xl mx-auto'></FaShoppingBag>
-            </div>
-          </div>
-        </div>
+
+      </div>
+      <div className='text-center my-6 group'>
+        <p className="w-[80%] mx-auto py-3 bg-white border-[1px] shadow-md rounded-md"><Link href={``} >{name} <span className='ml-3 text-xl font-semibold group-hover:ml-5 duration-300'>{">>"}</span></Link></p>
       </div>
     </Link>
   )
