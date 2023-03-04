@@ -1,13 +1,14 @@
 
-import React, { InputHTMLAttributes } from 'react'
-
+import React from 'react'
+import cn from 'clsx'
+import s from './Input.module.css'
 
 
 const Input = (props) => {
   const { className, children, onChange, ...rest } = props
 
 
-
+  const rootClassName = cn(s.root, {}, className)
   const handleOnChange = (e) => {
     if (onChange) {
       onChange(e.target.value)
@@ -18,7 +19,7 @@ const Input = (props) => {
   return (
     <label>
       <input
-        className={`bg-primary py-2 px-6 w-full appearance-none transition duration-150 ease-in-out pr-10 border border-accent-3 text-accent-6 ${className}`}
+        className={rootClassName}
         onChange={handleOnChange}
         autoComplete="off"
         autoCorrect="off"

@@ -21,7 +21,7 @@ import Searchbar from '../common/Searchbar'
 import Avatar from '../common/Avatar'
 
 const Navbar = () => {
-    const scrolled = useScroll(200)
+    const scrolled = useScroll(900)
     const [search, setSearch] = useState()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
@@ -76,9 +76,7 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
-                        <div>
 
-                        </div>
                         <div className='flex items-center justify-between space-x-2'>
                             <>
                                 <Tooltip content="Theme">
@@ -93,15 +91,15 @@ const Navbar = () => {
                             <>
                                 <Tooltip content="Cart">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
-                                        <Link href='/Cart'>
-                                            <PopCart />
-                                        </Link>
+
+                                        <PopCart />
+
                                     </motion.div>
 
                                 </Tooltip>
                             </>
                             <>
-                                <Tooltip content="Cart">
+                                <Tooltip content="Profile">
                                     <motion.div {...FADE_IN_ANIMATION_SETTINGS}>
                                         <button
                                             onClick={() => openModal()}

@@ -1,14 +1,11 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '../assets/base.css';
 
-html,
-body,
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@tailwind components;
+@import '../assets/components.css';
+
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew&display=swap');
 
 ::-webkit-scrollbar {
   width: 0px;

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Cross, ChevronLeft } from '@components/icons'
 import cn from 'clsx'
 import s from './SidebarLayout.module.css'
+import Cross from '@/components/layout/icons/Cross'
+import ChevronLeft from '@/components/layout/icons/ChevronLeft'
 
 
 const SidebarLayout = ({

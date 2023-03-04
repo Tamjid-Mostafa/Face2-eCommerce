@@ -60,7 +60,7 @@ export default function HeroBanner() {
                     {/* <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">{slides[currentSlide].heading}</h1>
                     <p className="md:text-md my-5">{slides[currentSlide].text}</p> */}
                     <div className="flex justify-center absolute bottom-[15%] left-[25%] lg:left-[45%]">
-                        <Link href="" className='px-5 py-3 bg-cyan-400 rounded-3xl flex items-center justify-center w-44 uppercase font-bold'>Shop now <RxPinRight className='ml-2 text-2xl'></RxPinRight></Link>
+                        <Link href="" className='px-5 py-3 bg-accent-5 rounded-3xl flex items-center justify-center w-44 uppercase font-bold'>Shop now <RxPinRight className='ml-2 text-2xl'></RxPinRight></Link>
                     </div>
                 </div>
             </div>

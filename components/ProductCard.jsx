@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaShoppingBag } from 'react-icons/fa'
 
 const ProductCard = ({ product }) => {
   const { name, image, price } = product

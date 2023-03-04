@@ -34,8 +34,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-merge-refs": "^2.0.1",
-    "tabbable": "^6.1.1",
-    "swiper": "^9.0.5"
+    "swiper": "^9.0.5",
+    "tabbable": "^6.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "http://localhost:3000";
+const DOMAIN = "https://face2-omega.vercel.app";
 
 export default function Meta({
     title = "Face2-Leading Clothing Brand",
