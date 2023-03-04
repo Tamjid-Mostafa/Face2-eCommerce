@@ -76,9 +76,7 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
-                        <div>
 
-                        </div>
                         <div className='flex items-center justify-between space-x-2'>
                             <>
                                 <Tooltip content="Theme">

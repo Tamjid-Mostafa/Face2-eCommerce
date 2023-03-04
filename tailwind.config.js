@@ -10,19 +10,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#DD9933',
-        secondary: '#40DB6C',
-        dimWhite: 'rgba(255, 255, 255, 0.7)',
-        dimGreen: 'rgb(66, 226, 111, 0.2)',
         ...blackA,
         ...mauve,
         ...violet,
         ...purple,
         ...indigo,
-        // primary: 'var(--primary)',
-        // 'primary-2': 'var(--primary-2)',
-        // secondary: 'var(--secondary)',
-        // 'secondary-2': 'var(--secondary-2)',
+        primary: 'var(--primary)',
+        'primary-2': 'var(--primary-2)',
+        secondary: 'var(--secondary)',
+        'secondary-2': 'var(--secondary-2)',
         hover: 'var(--hover)',
         'hover-1': 'var(--hover-1)',
         'hover-2': 'var(--hover-2)',
