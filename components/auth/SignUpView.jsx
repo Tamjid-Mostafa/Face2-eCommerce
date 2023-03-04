@@ -109,6 +109,7 @@ const SignUpView = () => {
           <Button
             variant="slim"
             type="submit"
+            className="bg-accent-9"
             loading={loading}
             disabled={disabled}
           >

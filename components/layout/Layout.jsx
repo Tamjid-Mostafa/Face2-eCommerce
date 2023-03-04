@@ -11,6 +11,7 @@ import CartSidebarView from '../cart/CartSidebarView'
 import dynamic from 'next/dynamic'
 import Modal from '../ui/Modal'
 import LoadingDots from '../ui/LoadingDots'
+import Header from '../Navbar/Header'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -84,7 +85,7 @@ const Layout = ({ children, meta }) => {
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (
-                    <Navbar />
+                    <Header />
                 )}
                 {children}
                 {router.pathname !== '/404' && (
