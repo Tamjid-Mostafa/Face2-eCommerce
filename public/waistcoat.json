@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Platinum Waistcoat",
+        "image": "https://i.ibb.co/j9Nryhz/waistcoat-1.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Sahara Waistcoat",
+        "image": "https://i.ibb.co/dKWHgww/waistcoat-2.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Premium Waistcoat",
+        "image": "https://i.ibb.co/9tt2q53/waistcoat-3.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Platinum Waistcoat",
+        "image": "https://i.ibb.co/x88y2cv/waistcoat-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Platinum Thobe",
+        "image": "https://i.ibb.co/dKWHgww/waistcoat-2.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Premium Thobe",
+        "image": "https://i.ibb.co/jg95bYg/waistcoat-6.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Sahara Thobe",
+        "image": "https://i.ibb.co/x88y2cv/waistcoat-4.jpg",
+        "price": "999"
+    },
+    {
+        "name": "Platinum Thobe",
+        "image": "https://i.ibb.co/9tt2q53/waistcoat-3.jpg",
+        "price": "999"
+    }
+]
