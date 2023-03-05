@@ -1,51 +1,92 @@
-import Button from '@/components/Button'
-import FavouriteButton from '@/components/FavouriteButton'
-import Image from 'next/image'
-import React from 'react'
-import { HiOutlineCheckCircle } from "react-icons/hi2";
+import Link from 'next/link';
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function ProductDetails() {
+    const productsImg = [
+        {
+            img: "https://i.ibb.co/zhbW5SR/one-Panjabi.jpg"
+        },
+        {
+            img: "https://i.ibb.co/7QnmHR1/two-Panjabi.jpg"
+        },
+        {
+            img: "https://i.ibb.co/Vpxn8nN/three-Panjabi.jpg"
+        }
+    ]
     return (
-        <div className='m-6'>
-            <div className='grid grid-cols-1 lg:grid-cols-2'>
-                <div>
-                    <img src="https://i.ibb.co/jLFK2Bg/female.jpg" alt="" />
+        <div className='m-6 w-[80%] mx-auto'>
+            <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 mt-48'>
+                <div className=''>
+                    <Swiper
+                        slidesPerView={1}
+                        centeredSlides={false}
+                        slidesPerGroupSkip={1}
+                        grabCursor={true}
+                        keyboard={{
+                            enabled: true,
+                        }}
+                        breakpoints={{
+                            769: {
+                                slidesPerView: 1,
+                                slidesPerGroup: 1,
+                            },
+                        }}
+                        scrollbar={true}
+                        navigation={true}
+                        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+                        className="mySwiper"
+                    >
+                        {
+                            productsImg.map(product => <SwiperSlide key={product.img} >
+                                <img className="h-[700px] w-full" src={product.img} />
+                            </SwiperSlide>)
+                        }
+                    </Swiper>
                 </div>
-                <div className='my-10 lg:pt-32 lg:-ml-12 py-5 bg-gray-200 px-11 text-black'>
-                    <h1 className="text-3xl font-bold uppercase leading-10">bloom cotton dress</h1>
-                    <h3 className='text-2xl font-semibold leading-10'>$155</h3>
-                    <p className='w-2/3 text-justify'>This dress is made ffrom white fabric and white cheetah-spot print fabric. It has a long narrow skirt that flares at at the bottom with a corset about the waist and short gathered sleeves.</p>
-                    <h4 className='text-lg font-semibold leading-10'>Select size</h4>
-                    <div className="flex gap-3">
-                        <button className="px-5 py-2 border-2 border-primary focus:shadow-[0_0_0_2px] focus:shadow-black" type='submit'>L</button>
-                        <button className="px-5 py-2 border-2 border-primary focus:shadow-[0_0_0_2px] focus:shadow-black" type='submit'>M</button>
-                        <button className="px-5 py-2 border-2 border-primary focus:shadow-[0_0_0_2px] focus:shadow-black" type='submit'>XL</button>
-                        <button className="px-5 py-2 border-2 border-primary focus:shadow-[0_0_0_2px] focus:shadow-black" type='submit'>XXL</button>
+                <div className='w-2/3 mx-auto'>
+                    <div className='text-center leading-9'>
+                        <h1>Platinum Panjabi</h1>
+                        <p className='text-gray-500'>Code: 232011</p>
+                        <h3>BDT 6,450</h3>
                     </div>
-                    <div className='my-5 flex gap-3 items-center'>
-                        <Button></Button>
-                        <FavouriteButton></FavouriteButton>
-                    </div>
-                    <div className='w-full bg-slate-900 h-[1px] my-4'></div>
-                    <div>
-                        <h3 className="text-2xl font-semibold leading-9">
-                            Details
-                        </h3>
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 leading-9'>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />Fits true to size</p>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />S22D319EST</p>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />Made in BD</p>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />98% Slik 2% Elastane Spandex</p>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />Dry Clean Only</p>
-                            <p className='flex items-center'><HiOutlineCheckCircle className='mr-1' />Delivery (5-7 days)</p>
+                    <div className='mt-4 text-center'>
+                        <div className='grid grid-cols-2'>
+                            <div>
+                                <h4>Select Size</h4>
+                            </div>
+                            <div className='text-gray-600 underline'>
+                                <Link href=""> View Size Guide</Link>
+                            </div>
                         </div>
+                        <div className="flex justify-center">
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>xs</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>s</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>m</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>l</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>xl</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>2xl</button>
+                            <button className="px-5 py-2  focus:bg-black focus:text-white  uppercase" type='submit'>3xl</button>
+                        </div>
+                        <div className='w-2/3 mx-auto bg-slate-900 h-[1px] my-4'></div>
                     </div>
-                    <div className='w-full bg-slate-900 h-[1px] my-4'></div>
-                    <div>
-                        <h3 className='text-2xl font-semibold leading-9'>Customer Service </h3>
-                        <p className='w-2/3 text-justify'>Our online customer care team is available Monday through Friday, 10AM-6PM. We are closed on weekends and national holidays. Please contact us. We would happy to assist you.</p>
-                        <h4 className='leading-9'>Call: +88018374754</h4>
-                        <h4>Email: customerservice@facetwo.com</h4>
+                    <div className='uppercase text-center mx-auto mt-6'>
+                        <Link className='bg-black text-white px-4 py-3' href="">
+                            add to cart
+                        </Link>
+                    </div>
+                    <div className='uppercase text-center mx-auto mt-8'>
+                        <Link className='border-2 border-black p-3' href="">
+                            Find in store
+                        </Link>
                     </div>
                 </div>
             </div>
