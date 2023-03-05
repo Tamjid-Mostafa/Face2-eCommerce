@@ -12,15 +12,15 @@ const NavMenu = ({ className }) => {
             <NavigationMenu.List className="flex list-none p-1 ">
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_px]">
-                        Women{' '}
+                        Eid Collection{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
                         />
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
-                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr] grid-cols-[0.75fr_0.75fr]">
-                            <li className="row-span-3 sm:grid hidden">
+                        <ul className="one m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[100vw] sm:grid-cols-3 grid-cols-1 ">
+                            {/* <li className="row-span-3 sm:grid hidden">
                                 <NavigationMenu.Link asChild>
                                     <Link
                                         className="focus:shadow-violet7 from-purple9 to-indigo9 flex 
@@ -28,15 +28,15 @@ const NavMenu = ({ className }) => {
                                         href="/"
                                     >
                                         <img className=' h-full object-cover object-center rounded-lg ' src="/assets/Menu-Femme_large.webp" alt="" />
-                                        {/* <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
+                                        <div className="mt-4 mb-[7px] text-[18px] font-semibold leading-[1.2] text-white p-[5px]">
                                             {''}
                                         </div>
                                         <p className="text-mauve4 text-[14px] leading-[1.3] ">
                                             {''}
-                                        </p> */}
+                                        </p>
                                     </Link>
                                 </NavigationMenu.Link>
-                            </li>
+                            </li> */}
                             {
                                 womenMenu.map((m, i) => {
                                     const { id, title, body } = m;
@@ -52,7 +52,7 @@ const NavMenu = ({ className }) => {
                 </NavigationMenu.Item>
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_px]">
-                        Men{' '}
+                        New Arrival{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
@@ -94,7 +94,7 @@ const NavMenu = ({ className }) => {
 
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_2px]">
-                        Panjabi{' '}
+                        Clothing{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
@@ -133,7 +133,7 @@ const NavMenu = ({ className }) => {
 
                 <NavigationMenu.Item>
                     <NavigationMenu.Trigger className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none outline-none focus:shadow-[0_0_0_2px]">
-                        Panjabi{' '}
+                        Footwear{' '}
                         <CaretDownIcon
                             className="text-violet10 relative top-[1px] transition-transform duration-[250] ease-in group-data-[state=open]:-rotate-180"
                             aria-hidden
@@ -175,7 +175,7 @@ const NavMenu = ({ className }) => {
                         className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
                         href="#"
                     >
-                        Watch
+                        Accessories
                     </NavigationMenu.Link>
                 </NavigationMenu.Item>
                 <NavigationMenu.Item>
@@ -183,7 +183,7 @@ const NavMenu = ({ className }) => {
                         className="text-mauve12 hover:bg-violet3 focus:shadow-violet7 block select-none rounded-[4px] px-3 py-2 text-[15px] font-semibold leading-none no-underline outline-none focus:shadow-[0_0_0_2px]"
                         href="#"
                     >
-                        Waistcoat
+                        Sale
                     </NavigationMenu.Link>
                 </NavigationMenu.Item>
 
