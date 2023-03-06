@@ -10,4 +10,10 @@ export { default as NewsLetter } from './NewsLetter';
 export { default as HomeCollectionCard } from './HomeCollectionCard';
 export { default as ProductDetails } from '../pages/ProductDetails';
 export { default as WaistcoatHome } from './WaistcoatHome';
+export { default as HomePanjabi } from './HomePanjabi';
+export { default as HomeBannerTwo } from './HomeBannerTwo';
+export { default as HomeBannerThree } from './HomeBannerThree';
+export { default as HomeBannerFour } from './HomeBannerFour';
+export { default as HomeLuxurySandals } from './HomeLuxurySandals';
+export { default as HomeLuxuryShoes } from './HomeLuxuryShoes';
 
