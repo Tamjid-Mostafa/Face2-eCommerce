@@ -100,9 +100,11 @@ const Header = () => {
                         </>
                     </div>
                 </div>
-                <div className='lg:flex hidden'>
+                <motion.div
+
+                    className='lg:flex hidden'>
                     <NavMenu className={`justify-center`} />
-                </div>
+                </motion.div>
             </div>
             <AnimatePresence>
                 <div className={`lg:hidden flex justify-between items-center  z-10 bg-white w-full fixed top-0 shadow-md shadow-white/50 ${scrolled ? "" : ""}`}>
