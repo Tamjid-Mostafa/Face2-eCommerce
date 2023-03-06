@@ -20,7 +20,7 @@ const Product = () => {
 
 
   return (
-    <div className='my-12'>
+    <div className=''>
       <Swiper
         slidesPerView={1}
         breakpoints={{
