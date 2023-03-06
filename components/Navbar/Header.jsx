@@ -10,6 +10,7 @@ import { FaShoppingBag } from 'react-icons/fa';
 import Avatar from '../common/Avatar';
 import { useUI } from '../ui/context';
 import Logo from '../ui/Logo/Logo';
+import ThemeSwitcher from '../ui/ThemeSwitcher';
 import NavMenu from './NavMenu';
 
 const Header = () => {
@@ -22,31 +23,31 @@ const Header = () => {
             <div
                 className={`absolute top-0 w-full border-b border-primary-2 bg-white bg-opacity-[0.7] z-10 transition-all duration-300 ${isMenuOpen && "hidden"}`}
             >
-                <div className="flex items-center justify-between xl:mx-auto lg:px-4 px-2 transition-all duration-300">
-                    <div>
-                        <div className='flex items-center'>
-                            <button
-                                className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start transition-all duration-300 justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
-                                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            >
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mt-[-1px] -rotate-45 bg-white"}`}></span>
-                            </button>
-                            <>
-                                <Tooltip content="Search">
-                                    <motion.button
-                                        className='rounded-full w-[35px] h-[35px] lg:hidden inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
-                                        {...FADE_IN_ANIMATION_SETTINGS}>
-                                        <MagnifyingGlassIcon />
-                                    </motion.button>
-                                </Tooltip>
-                            </>
-                        </div>
+                <div className="relative flex items-center justify-center xl:mx-auto lg:px-4 px-2 transition-all duration-300">
+
+                    <div className='absolute left-2 flex items-center'>
+                        <button
+                            className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start transition-all duration-300 justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        >
+                            <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
+                            <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>
+                            <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mt-[-1px] -rotate-45 bg-white"}`}></span>
+                        </button>
+                        <>
+                            <Tooltip content="Search">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px] lg:hidden inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <MagnifyingGlassIcon />
+                                </motion.button>
+                            </Tooltip>
+                        </>
                     </div>
+
                     <Logo />
 
-                    <div className='flex space-x-2'>
+                    <div className='absolute right-2 flex space-x-2'>
 
                         <>
                             <Tooltip content="Search">
@@ -57,6 +58,17 @@ const Header = () => {
                                 </motion.button>
                             </Tooltip>
                         </>
+                        {/* <>
+                            <Tooltip content="Search">
+                                <motion.button
+                                    className='rounded-full w-[35px] h-[35px]  lg:inline-flex hidden items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+
+                                    <ThemeSwitcher />
+                                </motion.button>
+                            </Tooltip>
+                        </> */}
+
                         {/* <>
                             <Tooltip content="Store Location">
                                 <motion.button
