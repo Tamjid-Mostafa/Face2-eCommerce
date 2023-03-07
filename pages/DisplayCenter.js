@@ -40,7 +40,7 @@ const DisplayCenter = () => {
     ]
     return (
 
-        <div className=''>
+        <div className='mt-60'>
             <div className='bg-[#f7f7f7] py-[70px] px-[7%]'>
                 <h1 className="text-3xl md:text-5xl"><span className='font-bold uppercase'>Display </span><span className='font-semibold uppercase md:text-[45px]'>Center</span></h1>
             </div>

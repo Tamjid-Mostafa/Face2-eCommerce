@@ -43,7 +43,7 @@ const Product = () => {
         className="mySwiper"
       >
         {
-          panjabies.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
+          panjabies.map((panjabi, i) => <SwiperSlide key={i}><ProductCard
 
             product={panjabi}
           ></ProductCard></SwiperSlide>)
