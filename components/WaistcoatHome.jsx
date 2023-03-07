@@ -39,7 +39,7 @@ const WaistcoatHome = () => {
                 className="mySwiper"
             >
                 {
-                    waistcoat.map(panjabi => <SwiperSlide key={panjabi.name}><ProductCard
+                    waistcoat.map((panjabi, i) => <SwiperSlide key={i}><ProductCard
 
                         product={panjabi}
                     ></ProductCard></SwiperSlide>)

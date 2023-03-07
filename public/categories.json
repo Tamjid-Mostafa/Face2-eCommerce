@@ -1,0 +1,50 @@
+[
+    {
+        "id": "01",
+        "name": "Premium Panjabi"
+    },
+    {
+        "id": "02",
+        "name": "Platinum Panjabi"
+    },
+    {
+        "id": "03",
+        "name": "Sahara Panjabi"
+    },
+    {
+        "id": "04",
+        "name": "Pajama"
+    },
+    {
+        "id": "05",
+        "name": "Joggers"
+    },
+    {
+        "id": "06",
+        "name": "Half Sleeve T-shirt"
+    },
+    {
+        "id": "07",
+        "name": "Polo T-shirt"
+    },
+    {
+        "id": "08",
+        "name": "Watch"
+    },
+    {
+        "id": "09",
+        "name": "women's Collection"
+    },
+    {
+        "id": "10",
+        "name": "Ladies Gown"
+    },
+    {
+        "id": "11",
+        "name": "Ladies Shrug"
+    },
+    {
+        "id": "12",
+        "name": "Silt Gown"
+    }
+]
