@@ -75,10 +75,11 @@ const SignUpView = () => {
 
         <Image
           src="/logo.png"
-          alt="face2.com.bd logo"
-          width="80"
-          height="80"
-          className="mr-2 rounded-sm"
+          alt="Face2"
+          width={80}
+          height={100}
+          className=""
+          priority
         />
 
         {/* --- Logo End--- */}
