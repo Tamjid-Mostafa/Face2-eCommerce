@@ -25,9 +25,9 @@ export default function ProductDetails() {
         }
     ]
     return (
-        <div>
-            <div className='m-6 w-[80%] mx-auto'>
-                <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 mt-48'>
+        <div className='mt-64'>
+            <div className='w-[80%] mx-auto'>
+                <div className='grid gap-6 grid-cols-1 lg:grid-cols-2'>
                     <div className=''>
                         <Swiper
                             slidesPerView={1}

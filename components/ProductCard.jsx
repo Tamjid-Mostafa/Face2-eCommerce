@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
   const { name, image, price } = product
 
   return (
-    <Link href="/ProductDetails">
+    <Link href="/AllProducts">
       <div
         className="h-[500px] hover:border-[1px] duration-200 ease-in relative group cursor-pointer"
         style={{
@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
 
       </div>
       <div className='text-center my-6 group'>
-        <p className="w-[80%] mx-auto py-3 bg-white border-[1px] shadow-md rounded-md"><Link href={``} >{name} <span className='ml-3 text-xl font-semibold group-hover:ml-5 duration-300'>{">>"}</span></Link></p>
+        <p className="w-[80%] mx-auto py-3 bg-white border-[1px] shadow-md rounded-md"><Link href={`/AllProducts`} >{name} <span className='ml-3 text-xl font-semibold group-hover:ml-5 duration-300'>{">>"}</span></Link></p>
       </div>
     </Link>
   )
