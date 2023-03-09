@@ -35,6 +35,7 @@ export default function Home({ meta }) {
           <HomeBannerThree />
           <HomeLuxurySandals />
           <HomeLuxuryShoes />
+          <WaistcoatHome />
           <HomeBannerFour />
         </div>
       </main>
