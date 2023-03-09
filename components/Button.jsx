@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Button({ children }) {
     return (
-        <div>
-            <Link href="" className='bg-black text-gray-300 p-5 hover:text-white hover:border-2 hover:border-amber-400'>
+        <div className='bg-transparent text-gray-300 p-5 hover:text-white hover:border-2 duration-75 hover:border-amber-400 w-[350px] mx-auto'>
+            <Link href="">
                 {children}
             </Link>
         </div >

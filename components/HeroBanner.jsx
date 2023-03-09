@@ -15,7 +15,7 @@ export default function HeroBanner() {
                 <div className="md:w-[70%] mx-auto pt-96 uppercase">
                     <Button>Eid collection</Button>
                 </div>
-                <div className="md:w-[70%] mx-auto pt-10 uppercase">
+                <div className="mt-3 uppercase">
                     <Button>New Arrivals</Button>
                 </div>
             </div>
