@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FindUs, Product } from '@/components';
+import DotIcon from '@/components/DotIcon';
 
 export default function ProductDetails() {
     const productsImg = [
@@ -25,9 +26,9 @@ export default function ProductDetails() {
         }
     ]
     return (
-        <div className=''>
-            <div className='m-6 w-[80%] mx-auto'>
-                <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 mt-48'>
+        <div className='mt-64'>
+            <div className='w-[80%] mx-auto'>
+                <div className='grid gap-6 grid-cols-1 lg:grid-cols-2'>
                     <div className=''>
                         <Swiper
                             slidesPerView={1}
@@ -107,41 +108,41 @@ export default function ProductDetails() {
                         </div>
                     </div>
                 </div>
-                <div className='mt-16  shadow-md shadow-gray-300 px-28 py-16'>
-                    <div className='grid gap-5 grid-cols-2'>
+                <div className='mt-16  shadow-md shadow-gray-300 px-5 py-3 lg:px-28 lg:py-16'>
+                    <div className='grid gap-5 lg:grid-cols-2'>
                         <div>
                             <h1 className='text-lg font-semibold leading-10'>Description</h1>
-                            <p className='lg:w-2/3 text-justify'>The Luxury Collection comprises of minimalistic, impeccable designs crafted from the world’s finest materials.</p>
+                            <p className='lg:w-2/3 lg:text-justify'>The Luxury Collection comprises of minimalistic, impeccable designs crafted from the world’s finest materials.</p>
                         </div>
                         <div>
                             <h1 className='text-lg font-semibold leading-10'>Details</h1>
                             <ul>
-                                <li>Semi-Formal / Casual</li>
-                                <li>Contrast Collar & 6cm Cuffs</li>
-                                <li>Contrast Upper Chest</li>
-                                <li>Regular Fit</li>
-                                <li>Face2 Signature Buttons</li>
+                                <li className='flex items-center'><DotIcon />Semi-Formal / Casual</li>
+                                <li className='flex items-center'><DotIcon />Contrast Collar & 6cm Cuffs</li>
+                                <li className='flex items-center'><DotIcon />Contrast Upper Chest</li>
+                                <li className='flex items-center'><DotIcon />Regular Fit</li>
+                                <li className='flex items-center'><DotIcon />Face2 Signature Buttons</li>
                             </ul>
                         </div>
                         <div>
                             <h1 className='text-lg font-semibold leading-10'>Material</h1>
                             <ul>
-                                <li>100% Ultra Fine Cotton</li>
-                                <li>100s Two-Ply</li>
-                                <li>Yarn Dyed Herringbone Weaved</li>
-                                <li>GSM 105 </li>
-                                <li>Fabric Finish : Liquid Ammonia + Easy Care</li>
+                                <li className='flex items-center'><DotIcon />100s Two-Ply</li>
+                                <li className='flex items-center'><DotIcon />100% Ultra Fine Cotton</li>
+                                <li className='flex items-center'><DotIcon />Yarn Dyed Herringbone Weaved</li>
+                                <li className='flex items-center'><DotIcon />GSM 105 </li>
+                                <li className='flex items-center'><DotIcon />Fabric Finish : Liquid Ammonia + Easy Care</li>
                             </ul>
                         </div>
                         <div>
                             <h1 className='text-lg font-semibold leading-10'>Care</h1>
                             <ul>
-                                <li>Dry clean recommended</li>
-                                <li>Wash separately with cool water</li>
-                                <li>Do not bleach</li>
-                                <li>Do not tumble dry</li>
-                                <li>Iron medium heat</li>
-                                <li>Do not iron over the label</li>
+                                <li className='flex items-center'><DotIcon />Dry clean recommended</li>
+                                <li className='flex items-center'><DotIcon />Wash separately with cool water</li>
+                                <li className='flex items-center'><DotIcon />Do not bleach</li>
+                                <li className='flex items-center'><DotIcon />Do not tumble dry</li>
+                                <li className='flex items-center'><DotIcon />Iron medium heat</li>
+                                <li className='flex items-center'><DotIcon />Do not iron over the label</li>
                             </ul>
                         </div>
                     </div>
