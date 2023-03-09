@@ -16,4 +16,5 @@ export { default as HomeBannerThree } from './HomeBannerThree';
 export { default as HomeBannerFour } from './HomeBannerFour';
 export { default as HomeLuxurySandals } from './HomeLuxurySandals';
 export { default as HomeLuxuryShoes } from './HomeLuxuryShoes';
+export { default as AllProductCard } from './AllProductCard'
 
