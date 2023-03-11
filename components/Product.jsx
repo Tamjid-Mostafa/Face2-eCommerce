@@ -23,6 +23,7 @@ const Product = () => {
     <div className=''>
       <Swiper
         slidesPerView={1}
+        spaceBetween={0.5}
         breakpoints={{
           640: {
             slidesPerView: 1
@@ -31,7 +32,7 @@ const Product = () => {
             slidesPerView: 2
           },
           1024: {
-            slidesPerView: 2
+            slidesPerView: 4
           },
         }}
         autoplay={{
@@ -44,9 +45,8 @@ const Product = () => {
       >
         {
           panjabies.map((panjabi, i) => <SwiperSlide key={i}><ProductCard
-
             product={panjabi}
-          ></ProductCard></SwiperSlide>)
+          /></SwiperSlide>)
         }
       </Swiper>
     </div>
