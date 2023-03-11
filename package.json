@@ -25,7 +25,6 @@
     "focus-trap-react": "^10.1.0",
     "framer-motion": "^9.0.7",
     "lodash.random": "^3.2.0",
-    "mongoose": "^7.0.0",
     "next": "13.1.6",
     "next-themes": "^0.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -41,6 +40,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
+    "mongoose": "^7.0.1",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^8.0.1",

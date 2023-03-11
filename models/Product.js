@@ -1,3 +1,13 @@
-import { Schema } from 'mongoose'
+import { model, models, Schema } from 'mongoose'
 
-const ProductSchema = new Schema()
+const ProductSchema = new Schema({
+  name: String,
+  description: String,
+  price: Number,
+  category: String,
+  picture: String,
+})
+
+const Product = models?.collections || model('collections', ProductSchema)
+
+export default Product
