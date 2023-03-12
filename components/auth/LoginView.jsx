@@ -4,9 +4,6 @@ import { useContext, useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import { useUI } from '../ui/context'
 import Input from '../ui/Input'
-import firebase from 'firebase/compat/app'
-import * as firebaseui from 'firebaseui'
-import 'firebaseui/dist/firebaseui.css'
 import { AuthContext } from '@/context/AuthProvider'
 
 
