@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
         className={`hover:border-[1px] duration-200 ease-in relative group cursor-pointer`}
       />
       <div className='text-center my-6 group'>
-        <p className="w-[80%] mx-auto py-3 bg-white border-[1px] shadow-md hover:shadow-none rounded-md"><Link href={`/AllProducts`} >{name} <span className='ml-3 text-xl font-semibold group-hover:ml-5 duration-300'>{">>"}</span></Link></p>
+        <p className="w-[80%] mx-auto py-3 bg-white border-[1px] shadow-md hover:shadow-none rounded-md">{name} <span className='ml-3 text-xl font-semibold group-hover:ml-5 duration-300'>{">>"}</span></p>
       </div>
     </Link>
   )
