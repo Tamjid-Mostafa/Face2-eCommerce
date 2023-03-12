@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import {
   getAuth,
   onAuthStateChanged,
+  RecaptchaVerifier,
   signInWithEmailAndPassword,
   signInWithPhoneNumber,
   signInWithPopup,
@@ -24,7 +25,13 @@ const AuthProvider = ({ children }) => {
 
   const createUser = (phoneNumber) => {
     setLoading(true)
-    return signInWithPhoneNumber(auth, phoneNumber)
+    const recaptchaVerifier = new RecaptchaVerifier(
+      'recaptcha-container',
+      {},
+      auth
+    )
+    recaptchaVerifier.render()
+    return signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier)
   }
 
   const signIn = (email, password) => {
