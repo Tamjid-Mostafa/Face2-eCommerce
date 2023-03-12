@@ -32,6 +32,8 @@
   --accent-9: #000;
   /* --font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif; */
+
+  --PhoneInputCountryFlag-aspectRatio: 1.333;
 }
 
 /* [data-theme='dark'] {

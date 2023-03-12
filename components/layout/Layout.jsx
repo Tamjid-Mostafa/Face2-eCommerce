@@ -12,6 +12,7 @@ import dynamic from 'next/dynamic'
 import Modal from '../ui/Modal'
 import LoadingDots from '../ui/LoadingDots'
 import Header from '../Navbar/Header'
+import { OTPView } from '../auth'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -63,6 +64,7 @@ const ModalView = ({
 }) => {
     return (
         <Modal onClose={closeModal}>
+            {modalView === 'OTP_VIEW' && <OTPView />}
             {modalView === 'LOGIN_VIEW' && <LoginView />}
             {modalView === 'SIGNUP_VIEW' && <SignUpView />}
             {modalView === 'FORGOT_VIEW' && <ForgotPassword />}
