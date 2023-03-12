@@ -3,6 +3,7 @@ import '@/styles/globals.css'
 import { ManagedUIContext } from '@/components/ui/context'
 import { useEffect } from 'react'
 import { AnimatePresence, domAnimation, LazyMotion } from 'framer-motion'
+import AuthProvider from '@/context/AuthProvider'
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -13,11 +14,13 @@ export default function App({ Component, pageProps }) {
     <>
       <LazyMotion features={domAnimation}>
         <AnimatePresence mode="wait">
-          <ManagedUIContext>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ManagedUIContext>
+          <AuthProvider>
+            <ManagedUIContext>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </ManagedUIContext>
+          </AuthProvider>
         </AnimatePresence>
       </LazyMotion>
     </>

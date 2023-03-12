@@ -24,6 +24,8 @@
     "clsx": "^1.2.1",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "firebase": "^9.17.2",
+    "firebaseui": "^6.0.2",
     "focus-trap-react": "^10.1.0",
     "framer-motion": "^9.0.7",
     "lodash.random": "^3.2.0",
