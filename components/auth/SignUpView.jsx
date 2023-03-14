@@ -1,7 +1,10 @@
+import { AuthContext } from '@/context/AuthProvider'
+import { validate } from 'email-validator'
 import Image from 'next/image'
-import { FC, useEffect, useState, useCallback } from 'react'
+import { FC, useEffect, useState, useCallback, useContext } from 'react'
 import Info from '../layout/icons/Info'
 import Button from '../ui/Button'
+import hitToast from '../ui/Button/Toast/hitToast'
 import { useUI } from '../ui/context'
 import Input from '../ui/Input'
 
@@ -17,57 +20,53 @@ const SignUpView = () => {
   const [dirty, setDirty] = useState(false)
   const [disabled, setDisabled] = useState(false)
 
-  // const signup = useSignup()
+  const { signUpUser } = useContext(AuthContext)
   const { setModalView, closeModal } = useUI()
 
-  // const handleSignup = async (e) => {
-  //   e.preventDefault()
+  const handleSignup = async (e) => {
+    e.preventDefault()
 
-  //   if (!dirty && !disabled) {
-  //     setDirty(true)
-  //     handleValidation()
-  //   }
+    if (!dirty && !disabled) {
+      setDirty(true)
+      handleValidation()
+    }
+    try {
+      setLoading(true)
+      setMessage('')
+      const result = await signUpUser(email, password)
+      console.log(result);
+      closeModal()
+      hitToast('success', `Hi! ${firstName}, Welcome to Face2`)
+    } catch ({ errors }) {
+      console.error(errors)
+      if (errors) {
+        setMessage(errors.map((e) => e.message).join('<br/>'))
+      } else {
+        setMessage('Unexpected error')
+      }
+      setDisabled(false)
+    } finally {
+      setLoading(false)
+    }
+  }
 
-  //   try {
-  //     setLoading(true)
-  //     setMessage('')
-  //     await signup({
-  //       email,
-  //       firstName,
-  //       lastName,
-  //       password,
-  //     })
-  //     closeModal()
-  //   } catch ({ errors }) {
-  //     console.error(errors)
-  //     if (errors instanceof Array) {
-  //       setMessage(errors.map((e: any) => e.message).join('<br/>'))
-  //     } else {
-  //       setMessage('Unexpected error')
-  //     }
-  //     setDisabled(false)
-  //   } finally {
-  //     setLoading(false)
-  //   }
-  // }
+  const handleValidation = useCallback(() => {
+    // Test for Alphanumeric password
+    const validPassword = /^(?=.*[a-zA-Z])(?=.*[0-9])/.test(password)
 
-  // const handleValidation = useCallback(() => {
-  //   // Test for Alphanumeric password
-  //   const validPassword = /^(?=.*[a-zA-Z])(?=.*[0-9])/.test(password)
+    // Unable to send form unless fields are valid.
+    if (dirty) {
+      setDisabled(!validate(email) || password.length < 7 || !validPassword)
+    }
+  }, [email, password, dirty])
 
-  //   // Unable to send form unless fields are valid.
-  //   if (dirty) {
-  //     setDisabled(!validate(email) || password.length < 7 || !validPassword)
-  //   }
-  // }, [email, password, dirty])
-
-  // useEffect(() => {
-  //   handleValidation()
-  // }, [handleValidation])
+  useEffect(() => {
+    handleValidation()
+  }, [handleValidation])
 
   return (
     <form
-      // onSubmit={handleSignup}
+      onSubmit={handleSignup}
       className="w-80 flex flex-col justify-between p-3"
     >
       <div className="flex justify-center pb-12 ">
@@ -97,7 +96,7 @@ const SignUpView = () => {
         <Input placeholder="Last Name" onChange={setLastName} />
         <Input type="email" placeholder="Email" onChange={setEmail} />
         <Input type="password" placeholder="Password" onChange={setPassword} />
-        <span className="text-accent-8">
+        <span className={`${!dirty ? "text-accent-8" : "text-red"}`}>
           <span className="inline-block align-middle ">
             <Info width="15" height="15" />
           </span>{' '}

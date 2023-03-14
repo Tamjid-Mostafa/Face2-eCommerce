@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import {
+  createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   RecaptchaVerifier,
@@ -32,6 +33,10 @@ const AuthProvider = ({ children }) => {
     )
     recaptchaVerifier.render()
     return signInWithPhoneNumber(auth, phoneNumber, recaptchaVerifier)
+  }
+  const signUpUser = (email, password, name) => {
+    setLoading(true)
+    return createUserWithEmailAndPassword(auth, email, password, name)
   }
 
   const signIn = (email, password) => {
@@ -68,6 +73,7 @@ const AuthProvider = ({ children }) => {
     loading,
     updateUser,
     setLoading,
+    signUpUser,
   }
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
