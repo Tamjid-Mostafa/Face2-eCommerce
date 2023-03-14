@@ -19,6 +19,7 @@ const OTPView = () => {
     const [error, setError] = useState('')
     const { setModalView, closeModal } = useUI()
     const { createUser, user } = useContext(AuthContext)
+
     const handleSignUp = async (e) => {
         e.preventDefault();
 

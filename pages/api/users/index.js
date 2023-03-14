@@ -1,5 +1,6 @@
 import { getUser } from '@/database/controller'
 import connectMongoose from '@/lib/mongoose/mongoose'
+import valid from '@/lib/valid'
 import User from '@/models/User'
 import { rest } from 'lodash'
 
@@ -32,4 +33,14 @@ export default async function users(req, res) {
       res.status(405).end(`Method ${method} Not Allowed`)
       break
   }
+}
+
+const register = async (req, res) => {
+  try {
+    const { name, email } = req.body
+
+    const errMsg = valid(name, email)
+
+    if (errMsg) return res.status(400).json({ err: errMsg })
+  } catch (err) {}
 }
