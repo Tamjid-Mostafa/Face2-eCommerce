@@ -1,5 +1,6 @@
 import React from 'react'
-
+import cn from 'clsx'
+import s from './Layout.module.css'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
 import Meta from './meta'
@@ -9,10 +10,8 @@ import LoginView from '../auth/LoginView'
 import { useUI } from '../ui/context'
 import CartSidebarView from '../cart/CartSidebarView'
 import dynamic from 'next/dynamic'
-import Modal from '../ui/Modal'
 import LoadingDots from '../ui/LoadingDots'
 import Header from '../Navbar/Header'
-import { OTPView } from '../auth'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -54,10 +53,16 @@ const ForgotPassword = dynamic(
         ...dynamicProps,
     }
 )
-// const Modal = dynamic(() => import('@components'), {
-//     ...dynamicProps,
-//     ssr: false,
-// })
+const OTPView = dynamic(
+    () => import('../auth/OTPView'),
+    {
+        ...dynamicProps,
+    }
+)
+const Modal = dynamic(() => import('../ui/Modal'), {
+    ...dynamicProps,
+    ssr: true,
+})
 const ModalView = ({
     modalView,
     closeModal,
@@ -83,7 +88,7 @@ const Layout = ({ children, meta }) => {
 
 
     return (
-        <div className='overflow-hidden relative'>
+        <div className={cn(s.root)}>
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (

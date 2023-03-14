@@ -51,8 +51,9 @@ module.exports = {
         'outline-normal': '0 0 0 2px var(--accent-2)',
         magical:
           'rgba(0, 0, 0, 0.02) 0px 30px 30px, rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
+        btn: 'rgba(0, 0, 0, 0.02) 0px 0px 30px,rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
       },
-      
+
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
@@ -106,6 +107,7 @@ module.exports = {
       scaleIn: 'scaleIn 200ms ease',
       scaleOut: 'scaleOut 200ms ease',
       fadeIn: 'fadeIn 200ms ease',
+      btnShadow: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       fadeOut: 'fadeOut 200ms ease',
       enterFromLeft: 'enterFromLeft 250ms ease',
       enterFromTop: 'enterFromTop 300ms ease-in',

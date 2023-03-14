@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'
 import { memo, useEffect } from 'react'
 import { FaSearch } from 'react-icons/fa'
-
+import cn from 'clsx'
+import s from './Searchbar.module.css'
 
 
 const Searchbar = ({ className, id = 'search' }) => {
@@ -19,7 +20,7 @@ const Searchbar = ({ className, id = 'search' }) => {
 
       router.push(
         {
-          pathname: `/cart`,
+          pathname: `/search`,
           query: q ? { q } : {},
         },
         undefined,
@@ -52,7 +53,7 @@ const Searchbar = ({ className, id = 'search' }) => {
         </svg>
       </div>
     </div> */}
-      <div className="relative flex items-center">
+      <div className={cn(s.root, className)}>
         <label className="hidden" htmlFor={id}>
           Search
         </label>
