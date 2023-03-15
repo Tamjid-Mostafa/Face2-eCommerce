@@ -6,11 +6,12 @@ import Button from '@/components/ui/Button'
 import { useUI } from '@/components/ui/context'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Bag, Check } from '@/components/layout/icons'
 
 const CartSidebarView = () => {
   const { closeSidebar, setSidebarView } = useUI()
   const [isLoading, setIsLoading] = useState(false)
-  const [isEmpty, setIsEmpty] = useState(false)
+  const [isEmpty, setIsEmpty] = useState(true)
   // const { data, isLoading, isEmpty } = useCart()
 
   // const { price: subTotal } = usePrice(
@@ -41,7 +42,7 @@ const CartSidebarView = () => {
       {isLoading || isEmpty ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-dashed border-primary rounded-full flex items-center justify-center w-16 h-16 p-12 bg-secondary text-secondary">
-            {/* <Bag className="absolute" /> */}
+            <Bag className="absolute" />
           </span>
           <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
             Your cart is empty
@@ -63,7 +64,7 @@ const CartSidebarView = () => {
       ) : success ? (
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-white rounded-full flex items-center justify-center w-16 h-16">
-            {/* <Check /> */}
+            <Check />
           </span>
           <h2 className="pt-6 text-xl font-light text-center">
             Thank you for your order.

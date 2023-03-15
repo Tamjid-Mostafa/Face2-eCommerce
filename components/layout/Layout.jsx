@@ -7,21 +7,22 @@ import Meta from './meta'
 import { Navbar } from '..'
 import Sidebar from '../ui/Sidebar'
 import LoginView from '../auth/LoginView'
-import { useUI } from '../ui/context'
 import CartSidebarView from '../cart/CartSidebarView'
 import dynamic from 'next/dynamic'
 import LoadingDots from '../ui/LoadingDots'
 import Header from '../Navbar/Header'
+import MenuSidebarView from '../Navbar/MenuSidebarView'
+import { useUI } from '../ui/context'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
     return (
         <Sidebar onClose={closeSidebar}>
             {sidebarView === 'CART_VIEW' && <CartSidebarView />}
-            {/* {sidebarView === 'SHIPPING_VIEW' && <ShippingView />}
-        {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />}
-        {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />}
-        {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />} */}
+            {/* {sidebarView === 'SHIPPING_VIEW' && <ShippingView />} */}
+            {/* {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />} */}
+            {/* {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />} */}
+            {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />}
         </Sidebar>
     )
 }

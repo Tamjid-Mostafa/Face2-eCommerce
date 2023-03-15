@@ -3,10 +3,7 @@ import useScroll from '@/lib/hooks/use-scroll';
 import Tooltip from '@/shared/tooltip';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react'
-import { FaShoppingBag } from 'react-icons/fa';
 import Avatar from '../common/Avatar';
 import Searchbar from '../common/Searchbar';
 import { Bag } from '../layout/icons';
