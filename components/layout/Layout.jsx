@@ -86,8 +86,6 @@ const ModalUI = () => {
 
 const Layout = ({ children, meta, pageProps: { categories = [], ...pageProps }, }) => {
     const router = useRouter()
-
-    console.log(categories);
     const navBarlinks = categories
         .map((c) => ({
             label: c.name,
