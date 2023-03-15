@@ -31,7 +31,10 @@ const Header = () => {
                             <div className='absolute left-2 flex items-center'>
                                 <button
                                     className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start transition-all duration-300 justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
-                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                    onClick={() => {
+                                        setSidebarView('MOBILE_MENU_VIEW')
+                                        openSidebar()
+                                    }}
                                 >
                                     <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
                                     <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>

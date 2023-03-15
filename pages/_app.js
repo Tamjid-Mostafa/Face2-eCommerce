@@ -6,6 +6,7 @@ import { AnimatePresence, domAnimation, LazyMotion } from 'framer-motion'
 import AuthProvider from '@/context/AuthProvider'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     document.body.classList?.remove('loading')
@@ -17,10 +18,10 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence mode="wait">
           <AuthProvider>
             <ManagedUIContext>
-              <Layout>
+              <Layout pageProps={pageProps}>
                 <Component {...pageProps} />
-                <ToastContainer />
               </Layout>
+              <ToastContainer />
             </ManagedUIContext>
           </AuthProvider>
         </AnimatePresence>
