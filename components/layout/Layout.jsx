@@ -100,6 +100,7 @@ const Layout = ({ children, meta }) => {
                 )}
             </>
             <ModalUI />
+            <SidebarUI />
         </div>
     )
 }

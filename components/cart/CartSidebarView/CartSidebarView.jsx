@@ -1,12 +1,16 @@
-import Button from '@/components/Button'
+import cn from 'clsx'
+import s from './CartSidebarView.module.css'
 import SidebarLayout from '@/components/common/SidebarLayout'
 import Cross from '@/components/layout/icons/Cross'
-import cn from 'clsx'
+import Button from '@/components/ui/Button'
+import { useUI } from '@/components/ui/context'
 import Link from 'next/link'
-import s from './CartSidebarView.module.css'
+import { useState } from 'react'
 
 const CartSidebarView = () => {
   const { closeSidebar, setSidebarView } = useUI()
+  const [isLoading, setIsLoading] = useState(false)
+  const [isEmpty, setIsEmpty] = useState(false)
   // const { data, isLoading, isEmpty } = useCart()
 
   // const { price: subTotal } = usePrice(
@@ -88,7 +92,7 @@ const CartSidebarView = () => {
             <ul className="pb-2">
               <li className="flex justify-between py-1">
                 <span>Subtotal</span>
-                <span>{subTotal}</span>
+                <span>{"subTotal"}</span>
               </li>
               <li className="flex justify-between py-1">
                 <span>Taxes</span>
@@ -101,12 +105,12 @@ const CartSidebarView = () => {
             </ul>
             <div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-2">
               <span>Total</span>
-              <span>{total}</span>
+              <span>{"total"}</span>
             </div>
             <div>
               {process.env.COMMERCE_CUSTOMCHECKOUT_ENABLED ? (
                 <Button Component="a" width="100%" onClick={goToCheckout}>
-                  Proceed to Checkout ({total})
+                  Proceed to Checkout ({"total"})
                 </Button>
               ) : (
                 <Button href="/checkout" Component="a" width="100%">

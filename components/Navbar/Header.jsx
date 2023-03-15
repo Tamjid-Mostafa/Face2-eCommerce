@@ -99,7 +99,13 @@ const Header = () => {
                                     <Tooltip content="Cart">
                                         <motion.button
                                             className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
-                                            {...FADE_IN_ANIMATION_SETTINGS}>
+                                            {...FADE_IN_ANIMATION_SETTINGS}
+                                            onClick={() => {
+                                                setSidebarView('CART_VIEW')
+                                                openSidebar()
+                                            }}
+                                        >
+
                                             <Bag />
                                         </motion.button>
                                     </Tooltip>
