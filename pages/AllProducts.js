@@ -10,6 +10,8 @@ const AllProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
+
+    console.log(products);
     return (
         <div>
             <h1 className="text-center text-3xl font-semibold my-10 uppercase mt-56">Panjabi</h1>
