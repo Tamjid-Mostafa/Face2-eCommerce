@@ -84,8 +84,15 @@ const ModalUI = () => {
     ) : null
 }
 
-const Layout = ({ children, meta }) => {
+const Layout = ({ children, meta, pageProps: { categories = [], ...pageProps }, }) => {
     const router = useRouter()
+
+    console.log(categories);
+    const navBarlinks = categories
+        .map((c) => ({
+            label: c.name,
+            href: `/search/${c.slug}`,
+        }))
 
 
     return (
@@ -101,7 +108,7 @@ const Layout = ({ children, meta }) => {
                 )}
             </>
             <ModalUI />
-            <SidebarUI />
+            <SidebarUI links={navBarlinks} />
         </div>
     )
 }
