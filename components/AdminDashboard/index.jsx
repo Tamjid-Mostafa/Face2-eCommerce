@@ -1,2 +1,2 @@
 export { default as AddProduct } from './AddProduct';
-export { defaul as UploadImage } from './UploadImage'
+export { default as UploadImage } from './UploadImage'
