@@ -41,7 +41,7 @@ const AddProduct = () => {
                 </Link>
             </div>
             <div className="flex justify-around">
-                <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center border">
+                {/* <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center border">
                     <form
                         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col"
                     // onSubmit={handleSubmit(onSubmit)}
@@ -70,7 +70,7 @@ const AddProduct = () => {
                             </div>
                         </CloudinaryContext>
                     )}
-                </div>
+                </div> */}
                 <div className="w-1/2 p-4">
                     <form
                     // onSubmit={handleSubmit(onSubmit)}
