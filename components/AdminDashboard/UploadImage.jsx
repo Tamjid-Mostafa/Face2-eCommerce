@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const adminDashbord = () => {
-    const background = 'https://res.cloudinary.com/dhrxixoln/image/upload/v1678875255/3129492_mwwxgh.jpg'
+const UploadImage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
 
     const handleFileChange = (event) => {
@@ -14,7 +13,7 @@ const adminDashbord = () => {
         // Do something with the selected file, such as upload it to a server
     };
     return (
-        <div className="max-w-md mx-auto mt-56">
+        <div className="max-w-md mx-auto">
             <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                     <label htmlFor="image" className="block text-gray-700 font-bold mb-2">
@@ -72,17 +71,9 @@ const adminDashbord = () => {
                         </div>
                     </div >
                 </div >
-                <div className="flex items-center justify-between">
-                    <button
-                        type="submit"
-                        className="bg-orange-600 text-emerald-500 p-4"
-                    >
-                        Upload
-                    </button>
-                </div>
             </form >
         </div >
     );
 };
 
-export default adminDashbord;
+export default UploadImage;
