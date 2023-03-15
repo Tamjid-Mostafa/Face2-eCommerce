@@ -11,7 +11,7 @@ export default function HomeWaistcoat() {
                     width={1920}
                     height={1080}
                     loading="lazy"
-                    className="" src=" https://i.ibb.co/1MkMkjz/waistcoat-banner-1.jpg" alt="" />
+                    className="" src="https://i.ibb.co/1MkMkjz/waistcoat-banner-1.jpg" alt="" />
                 <div className="text-center group my-3">
                     <Link href={``} >
                         Waistcoat

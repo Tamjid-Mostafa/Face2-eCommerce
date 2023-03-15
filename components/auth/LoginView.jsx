@@ -5,7 +5,6 @@ import Button from '../ui/Button'
 import { useUI } from '../ui/context'
 import Input from '../ui/Input'
 import { AuthContext } from '@/context/AuthProvider'
-import PhoneInput from 'react-phone-number-input'
 
 
 const LoginView = () => {
