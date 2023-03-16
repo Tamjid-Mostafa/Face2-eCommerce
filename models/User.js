@@ -10,7 +10,7 @@ const UserSchema = new Schema(
       unique: true,
     },
     phone: {
-      type: String,
+      type: Number,
       unique: true,
     },
     photoURL: {
