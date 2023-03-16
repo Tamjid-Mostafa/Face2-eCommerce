@@ -4,9 +4,13 @@ import Product from '@/models/Product'
 
 export async function getProduct(req, res) {
   try {
-    const result = await Product.find({})
-    if (!result) return res.status(404).json({ error: 'Data not found' })
-    res.status(200).json(result)
+    const products = await Product.find({})
+    if (!products) return res.status(404).json({ error: 'Data not found' })
+    res.status(200).json({
+      status: 'success',
+      result: products.length,
+      products,
+    })
   } catch (error) {
     res.status(404).json({ error: 'Error While Fetching Data' })
   }
