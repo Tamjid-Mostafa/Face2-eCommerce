@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay, FreeMode, Navigation } from 'swiper';
 import 'swiper/css/navigation';
 import Link from 'next/link';
 
@@ -23,6 +23,7 @@ const Product = () => {
     <div className=''>
       <Swiper
         slidesPerView={1}
+        spaceBetween={1}
         breakpoints={{
           640: {
             slidesPerView: 1
@@ -31,22 +32,22 @@ const Product = () => {
             slidesPerView: 2
           },
           1024: {
-            slidesPerView: 3
+            slidesPerView: 4
           },
         }}
+        freeMode={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
         }}
         navigation={true}
-        modules={[Autoplay, Navigation]}
+        modules={[FreeMode, Autoplay, Navigation]}
         className="mySwiper"
       >
         {
           panjabies.map((panjabi, i) => <SwiperSlide key={i}><ProductCard
-
             product={panjabi}
-          ></ProductCard></SwiperSlide>)
+          /></SwiperSlide>)
         }
       </Swiper>
     </div>

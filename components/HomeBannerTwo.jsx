@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const HomeBannerTwo = () => {
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('/products.json')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setProducts(data))
     }, [])
     return (
         <div>

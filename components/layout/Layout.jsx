@@ -1,27 +1,28 @@
 import React from 'react'
-
+import cn from 'clsx'
+import s from './Layout.module.css'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
 import Meta from './meta'
 import { Navbar } from '..'
 import Sidebar from '../ui/Sidebar'
 import LoginView from '../auth/LoginView'
-import { useUI } from '../ui/context'
 import CartSidebarView from '../cart/CartSidebarView'
 import dynamic from 'next/dynamic'
-import Modal from '../ui/Modal'
 import LoadingDots from '../ui/LoadingDots'
 import Header from '../Navbar/Header'
+import MenuSidebarView from '../Navbar/MenuSidebarView'
+import { useUI } from '../ui/context'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
     return (
         <Sidebar onClose={closeSidebar}>
             {sidebarView === 'CART_VIEW' && <CartSidebarView />}
-            {/* {sidebarView === 'SHIPPING_VIEW' && <ShippingView />}
-        {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />}
-        {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />}
-        {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />} */}
+            {/* {sidebarView === 'SHIPPING_VIEW' && <ShippingView />} */}
+            {/* {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />} */}
+            {/* {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />} */}
+            {sidebarView === 'MOBILE_MENU_VIEW' && <MenuSidebarView links={links} />}
         </Sidebar>
     )
 }
@@ -53,16 +54,23 @@ const ForgotPassword = dynamic(
         ...dynamicProps,
     }
 )
-// const Modal = dynamic(() => import('@components'), {
-//     ...dynamicProps,
-//     ssr: false,
-// })
+const OTPView = dynamic(
+    () => import('../auth/OTPView'),
+    {
+        ...dynamicProps,
+    }
+)
+const Modal = dynamic(() => import('../ui/Modal'), {
+    ...dynamicProps,
+    ssr: true,
+})
 const ModalView = ({
     modalView,
     closeModal,
 }) => {
     return (
         <Modal onClose={closeModal}>
+            {modalView === 'OTP_VIEW' && <OTPView />}
             {modalView === 'LOGIN_VIEW' && <LoginView />}
             {modalView === 'SIGNUP_VIEW' && <SignUpView />}
             {modalView === 'FORGOT_VIEW' && <ForgotPassword />}
@@ -76,12 +84,17 @@ const ModalUI = () => {
     ) : null
 }
 
-const Layout = ({ children, meta }) => {
+const Layout = ({ children, meta, pageProps: { categories = [], ...pageProps }, }) => {
     const router = useRouter()
+    const navBarlinks = categories
+        .map((c) => ({
+            label: c.name,
+            href: `/search/${c.slug}`,
+        }))
 
 
     return (
-        <div className='overflow-hidden relative'>
+        <div className={cn(s.root)}>
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (
@@ -93,6 +106,7 @@ const Layout = ({ children, meta }) => {
                 )}
             </>
             <ModalUI />
+            <SidebarUI links={navBarlinks} />
         </div>
     )
 }

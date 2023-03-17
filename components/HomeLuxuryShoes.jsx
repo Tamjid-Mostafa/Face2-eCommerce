@@ -10,7 +10,8 @@ const HomeLuxuryShoes = () => {
                     width={1920}
                     height={1080}
                     loading="lazy"
-                    className="" src=" https://i.ibb.co/rw8FxLJ/home-Shoes.jpg" alt="" />
+                    className=""
+                    src="https://i.ibb.co/rw8FxLJ/home-Shoes.jpg" alt="" />
                 <div className="text-center group my-3">
                     <Link href={``} >
                         Luxury Shoes

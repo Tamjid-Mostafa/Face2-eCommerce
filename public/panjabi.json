@@ -1,42 +1,42 @@
 [
     {
         "name": "Platinum Panjabi",
-        "image": "https://i.ibb.co/y6WWx0x/panjabi-11.jpg",
-        "price": "999"
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197525/Face2/pp_138_vemyjs.jpg",
+        "price": "2450"
     },
     {
         "name": "Sahara Panjabi",
-        "image": "https://i.ibb.co/qY6P1C5/panjabi-12.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197548/Face2/PP-140aa_v1asz2.jpg",
         "price": "999"
     },
     {
         "name": "Premium Panjabi",
-        "image": "https://i.ibb.co/TtdV38f/panjabi-14.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197570/Face2/PP-141_me6qur.jpg",
         "price": "999"
     },
     {
         "name": "Platinum Panjabi",
-        "image": "https://i.ibb.co/YjxQ4SB/panjabi-15.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197601/Face2/PP-144aa_go3soe.jpg",
         "price": "999"
     },
     {
         "name": "Platinum Thobe",
-        "image": "https://i.ibb.co/1LrMKzb/panjabi-16.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197616/Face2/PP-145_u3lkxx.jpg",
         "price": "999"
     },
     {
         "name": "Premium Thobe",
-        "image": "https://i.ibb.co/YjxQ4SB/panjabi-15.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197633/Face2/PP-147aa_wvnfiy.jpg",
         "price": "999"
     },
     {
         "name": "Sahara Thobe",
-        "image": "https://i.ibb.co/BCDmVZB/panjabi-18.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197666/Face2/PP-150_ftrmtw.jpg",
         "price": "999"
     },
     {
         "name": "Platinum Thobe",
-        "image": "https://i.ibb.co/wWC9Zq0/panjabi-19.jpg",
+        "image": "https://res.cloudinary.com/dtoj9n94u/image/upload/v1678197726/Face2/PP-151_dwajra.jpg",
         "price": "999"
     }
 ]

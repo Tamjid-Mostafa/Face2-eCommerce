@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CloudinaryContext, Image, Transformation } from 'cloudinary-react';
 import Link from 'next/link';
+import UploadImage from './UploadImage';
 // import { v2 as cloudinary } from 'cloudinary';
 // import axios from 'axios';
 // import { useRouter } from 'next/router';
@@ -33,7 +34,7 @@ const AddProduct = () => {
     // };
 
     return (
-        <div className=' mt-56 w-[1480px] mx-auto'>
+        <div className='mt-12 mw-[1480px] mx-auto'>
             <div className='flex justify-between items-start'>
                 <h1 className='font-semibold text-2xl mb-5'>Add Product</h1>
                 <Link href="">
@@ -71,6 +72,9 @@ const AddProduct = () => {
                         </CloudinaryContext>
                     )}
                 </div> */}
+                <div className="">
+                    <UploadImage />
+                </div>
                 <div className="w-1/2 p-4">
                     <form
                     // onSubmit={handleSubmit(onSubmit)}

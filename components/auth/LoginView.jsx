@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import { useUI } from '../ui/context'
 import Input from '../ui/Input'
+import { AuthContext } from '@/context/AuthProvider'
 
 
 const LoginView = () => {
@@ -16,7 +17,21 @@ const LoginView = () => {
     const [disabled, setDisabled] = useState(false)
     const { setModalView, closeModal } = useUI()
 
-
+    const { createUser } = useContext(AuthContext)
+    const handleSignUp = (e) => {
+        e.preventDefault()
+        setLoading(true);
+        setError("");
+        createUser()
+            .then((result) => {
+                console.log(result)
+            })
+            .catch((error) => {
+                console.error(error);
+                setError(error.message);
+            });
+    };
+    const [value, setValue] = useState()
 
     return (
         <form

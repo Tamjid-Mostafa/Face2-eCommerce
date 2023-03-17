@@ -1,12 +1,11 @@
 import { ThemeProvider } from 'next-themes'
 import React, { createContext, useCallback, useMemo } from 'react'
 
-
 const initialState = {
   displaySidebar: false,
   displayDropdown: false,
   displayModal: false,
-  modalView: 'LOGIN_VIEW',
+  modalView: 'OTP_VIEW',
   sidebarView: 'CART_VIEW',
   userAvatar: '',
 }
@@ -161,9 +160,7 @@ export const useUI = () => {
   return context
 }
 
-export const ManagedUIContext = ({
-  children,
-}) => (
+export const ManagedUIContext = ({ children }) => (
   <UIProvider>
     <ThemeProvider>{children}</ThemeProvider>
   </UIProvider>
