@@ -42,6 +42,36 @@ const AddProduct = () => {
                 </Link>
             </div>
             <div className="flex justify-around">
+                {/* <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center border">
+                    <form
+                        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col"
+                    // onSubmit={handleSubmit(onSubmit)}
+                    >
+                        <h2 className="text-xl font-bold mb-4">Upload an Image</h2>
+                        <input
+                            type="file"
+                            name="image"
+                            accept="image/*"
+                            className="mb-4"
+                            {...register("image", { required: true })}
+                        />
+                        <button
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            type="submit"
+                        >
+                            Upload
+                        </button>
+                    </form>
+                    {image && (
+                        <CloudinaryContext cloudName="your_cloud_name">
+                            <div className="max-w-md mx-auto">
+                                <Image publicId={image}>
+                                    <Transformation width="500" crop="scale" />
+                                </Image>
+                            </div>
+                        </CloudinaryContext>
+                    )}
+                </div> */}
                 <div className="">
                     <UploadImage />
                 </div>
