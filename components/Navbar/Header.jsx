@@ -3,10 +3,7 @@ import useScroll from '@/lib/hooks/use-scroll';
 import Tooltip from '@/shared/tooltip';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react'
-import { FaShoppingBag } from 'react-icons/fa';
 import Avatar from '../common/Avatar';
 import Searchbar from '../common/Searchbar';
 import { Bag } from '../layout/icons';
@@ -34,7 +31,10 @@ const Header = () => {
                             <div className='absolute left-2 flex items-center'>
                                 <button
                                     className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start transition-all duration-300 justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
-                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                    onClick={() => {
+                                        setSidebarView('MOBILE_MENU_VIEW')
+                                        openSidebar()
+                                    }}
                                 >
                                     <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
                                     <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>
@@ -99,7 +99,13 @@ const Header = () => {
                                     <Tooltip content="Cart">
                                         <motion.button
                                             className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
-                                            {...FADE_IN_ANIMATION_SETTINGS}>
+                                            {...FADE_IN_ANIMATION_SETTINGS}
+                                            onClick={() => {
+                                                setSidebarView('CART_VIEW')
+                                                openSidebar()
+                                            }}
+                                        >
+
                                             <Bag />
                                         </motion.button>
                                     </Tooltip>
