@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react'
 import throttle from 'lodash.throttle'
 import cn from 'clsx'
 import s from './Navbar.module.css'
-import { AnimatePresence, motion } from 'framer-motion';
+
 const NavbarRoot = ({ children }) => {
   const [hasScrolled, setHasScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      const offset = 300
+      const offset = 0
       const { scrollTop } = document.documentElement
       const scrolled = scrollTop > offset
 
@@ -24,22 +24,9 @@ const NavbarRoot = ({ children }) => {
   }, [hasScrolled])
 
   return (
-    <motion.div
-      transition={{
-        type: "tween",
-        damping: 100,
-        stiffness: 800,
-        duration: 0.5
-      }}
-      initial={{
-        opacity: 0
-      }}
-      animate={{
-        opacity: 1
-      }}
-      className={cn(s.root, { 'fixed': hasScrolled })}>
+    <div className={cn(s.root, { 'shadow-magical': hasScrolled })}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 

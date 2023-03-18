@@ -9,36 +9,40 @@ import Searchbar from '../common/Searchbar';
 import { Bag } from '../layout/icons';
 import Container from '../ui/Container';
 import { useUI } from '../ui/context';
+import { Dropdown, DropdownTrigger } from '../ui/Dropdown/Dropdown';
 import Logo from '../ui/Logo/Logo';
-import NavbarRoot from './NavbarRoot';
+import Text from '../ui/Text';
 import NavMenu from './NavMenu';
+import CustomerMenuContent from './UserNav/CustomerMenuContent';
 
 const Header = () => {
     const scrolled = useScroll(500);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
         useUI()
+
+
     return (
 
         <Container clean className="mx-auto max-w-8xl px-6">
 
             <>
                 <div
-                    className={`w-full border-b border-primary-2 bg-white bg-opacity-[0.7] z-10 transition-all duration-300 ${isMenuOpen && "hidden"}`}
+                    className={`w-full border-b border-primary-2 bg-primary bg-opacity-[0.7] z-10  ${scrolled && "fixed top-0 left-0"}`}
                 >
-                    <div className="relative flex items-center justify-center xl:mx-auto lg:px-4 px-2 transition-all duration-300">
+                    <div className="relative flex items-center justify-center xl:mx-auto lg:px-4 px-2 ">
 
                         <div className='absolute left-2 flex items-center'>
                             <button
-                                className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start transition-all duration-300 justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
+                                className={`relative w-14 h-14  rounded-full lg:hidden flex flex-col items-start  justify-center  ${!isMenuOpen ? "space-y-[6px]" : ""}`}
                                 onClick={() => {
                                     setSidebarView('MOBILE_MENU_VIEW')
                                     openSidebar()
                                 }}
                             >
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>
-                                <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mt-[-1px] -rotate-45 bg-white"}`}></span>
+                                <span className={`h-[2px]   z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mb-[-1px] rotate-45 bg-white"}`}></span>
+                                <span className={`h-[2px]   z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "hidden"}`}></span>
+                                <span className={`h-[2px]   z-[10] ${!isMenuOpen ? "w-7 bg-secondary hover:bg-secondary-2" : "w-6 mt-[-1px] -rotate-45 bg-white"}`}></span>
                             </button>
                             <>
                                 <Tooltip content="Search">
@@ -50,8 +54,13 @@ const Header = () => {
                                 </Tooltip>
                             </>
                         </div>
-
-                        <Logo />
+                        {
+                            scrolled ? <motion.div
+                                {...FADE_IN_ANIMATION_SETTINGS}
+                            >
+                                <Text variant="pageHeading">Face2</Text>
+                            </motion.div> : <Logo />
+                        }
 
                         <div className='absolute right-2 flex space-x-2'>
 
@@ -86,14 +95,14 @@ const Header = () => {
 
                         </> */}
                             <>
-                                <Tooltip content="Profile">
-                                    <motion.button
-                                        onClick={() => openModal()}
-                                        className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
-                                        {...FADE_IN_ANIMATION_SETTINGS}>
-                                        <Avatar />
-                                    </motion.button>
-                                </Tooltip>
+
+                                <motion.button
+                                    onClick={() => openModal()}
+                                    className='rounded-full w-[35px] h-[35px] inline-flex items-center justify-center text-mauve12 bg-white/60 shadow-[0_2px_20px] shadow-blackA7 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black cursor-pointer outline-none'
+                                    {...FADE_IN_ANIMATION_SETTINGS}>
+                                    <Avatar />
+                                </motion.button>
+
                             </>
                             <>
                                 <Tooltip content="Cart">
@@ -140,8 +149,8 @@ const Header = () => {
                                     className={`relative w-14 h-14   flex flex-col items-center transition-all duration-200 justify-center hover:border border-accent-7 ${!isMenuOpen ? "space-y-1" : ""}`}
                                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 >
-                                    <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-primary" : "w-6 mb-[-1px] rotate-45 bg-secondary hover:bg-secondary-2"}`}></span>
-                                    <span className={`h-[2px] transition-all duration-300  z-[10] ${!isMenuOpen ? "w-7 bg-primary" : "w-6 mt-[-1px] -rotate-45 bg-secondary hover:bg-secondary-2"}`}></span>
+                                    <span className={`h-[2px]   z-[10] ${!isMenuOpen ? "w-7 bg-primary" : "w-6 mb-[-1px] rotate-45 bg-secondary hover:bg-secondary-2"}`}></span>
+                                    <span className={`h-[2px]   z-[10] ${!isMenuOpen ? "w-7 bg-primary" : "w-6 mt-[-1px] -rotate-45 bg-secondary hover:bg-secondary-2"}`}></span>
 
                                 </button>
                             </div>

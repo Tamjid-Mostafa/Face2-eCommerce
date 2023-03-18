@@ -2,6 +2,7 @@ import { Inter } from '@next/font/google'
 import Meta from '@/components/layout/meta'
 import LoadingDots from '@/components/ui/LoadingDots'
 import dynamic from 'next/dynamic'
+import Container from '@/components/ui/Container'
 import {
   HeroBanner,
   HomeWaistcoat,
@@ -84,21 +85,23 @@ export default function Home({ meta }) {
     <>
       <Meta {...meta} />
       <main>
-        <HeroBanner />
-        <div className="px-[2px]">
-          <HomePanjabi />
-          <Product />
-          {/* <FindUs></FindUs>
+        <Container clean className="max-w-8xl mx-auto ">
+          <HeroBanner />
+          <div className="px-[2px]">
+            <HomePanjabi />
+            <Product />
+            {/* <FindUs></FindUs>
         <NewsLetter /> */}
-          <HomeBannerTwo />
-          <HomeWaistcoat />
-          <WaistcoatHome />
-          <HomeBannerThree />
-          <HomeLuxurySandals />
-          <HomeLuxuryShoes />
-          <WaistcoatHome />
-          <HomeBannerFour />
-        </div>
+            <HomeBannerTwo />
+            <HomeWaistcoat />
+            <WaistcoatHome />
+            <HomeBannerThree />
+            <HomeLuxurySandals />
+            <HomeLuxuryShoes />
+            <WaistcoatHome />
+            <HomeBannerFour />
+          </div>
+        </Container>
       </main>
     </>
   )
