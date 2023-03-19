@@ -21,7 +21,7 @@ import MenuButton from '@/components/ui/MenuButton';
 const Header = ({
     absolute = false, // navbar absolute position for only the landing page
 }) => {
-    const scrolled = useScroll(50);
+    const scrolled = useScroll(500);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { closeSidebarIfPresent, openModal, setSidebarView, openSidebar } =
         useUI()
@@ -38,7 +38,6 @@ const Header = ({
                     className={cn(s.root, { "absolute top-0 left-0 bg-white/50 border-none": absolute })}
                 >
                     <div className={s.nav}>
-
                         <div className='absolute left-2 flex items-center'>
                             <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 isMenuOpen={isMenuOpen}
@@ -95,9 +94,10 @@ const Header = ({
                         </div>
                     </div>
                     <motion.div
-                        className='lg:flex hidden'>
-                        <Text variant="pageHeading">Face 2</Text>
-                        <NavMenu className={`justify-end`} />
+                        className={`lg:flex hidden ${scrolled && "fixed top-0  bg-primary border-"}`}>
+                        <Text className="w-1/6"
+                            variant="logo">Face 2</Text>
+                        <NavMenu className={`justify-start`} />
                     </motion.div>
                 </motion.div>
             </AnimatePresence>

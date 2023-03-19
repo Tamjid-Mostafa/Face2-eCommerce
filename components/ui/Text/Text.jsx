@@ -22,6 +22,7 @@ const Text = ({
     heading: 'h1',
     pageHeading: 'h1',
     sectionHeading: 'h2',
+    logo: 'h1',
   }
 
   const Component = componentsMap[variant]
@@ -41,6 +42,7 @@ const Text = ({
           [s.heading]: variant === 'heading',
           [s.pageHeading]: variant === 'pageHeading',
           [s.sectionHeading]: variant === 'sectionHeading',
+          [s.logo]: variant === 'logo',
         },
         className
       )}
