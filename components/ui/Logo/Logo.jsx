@@ -7,10 +7,10 @@ export default function Logo(params) {
             <Image
                 src="/logo.png"
                 alt="Face2"
-                width={100}
-                height={100}
+                width={64}
+                height={64}
+                quality='85'
                 className=""
-                priority
             />
             <h1 className="text-3xl font-bold text-primary tracking-widest">Face2</h1>
         </div>
