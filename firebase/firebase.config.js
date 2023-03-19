@@ -5,12 +5,12 @@ import { initializeApp } from 'firebase/app'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyBSDL9pP7a9B1xiejpe9hQPmCE8VIuF0d0',
-  authDomain: 'face2-ecommerce.firebaseapp.com',
-  projectId: 'face2-ecommerce',
-  storageBucket: 'face2-ecommerce.appspot.com',
-  messagingSenderId: '1077177995972',
-  appId: '1:1077177995972:web:d3abef60720e2e79fc6f91',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_apiKey,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_authDomain,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_projectId,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_storageBucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_messagingSenderId,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_appId,
 }
 
 // Initialize Firebase

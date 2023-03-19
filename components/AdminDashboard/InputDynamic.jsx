@@ -25,7 +25,7 @@ const InputDynamic = ({ children }) => {
     return (
         <div className="mb-4">
             <h3
-                className="block text-gray-700 text-sm font-bold mb-2"
+                className="block text-accent-7 bg-inherit text-sm font-bold mb-2"
                 htmlFor="productTags"
             >
                 {children}
@@ -34,7 +34,7 @@ const InputDynamic = ({ children }) => {
                 <div key={index} className="flex my-2">
                     <input
                         type="text"
-                        className="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded-2xl w-full py-2 px-3 text-accent-7 bg-inherit leading-tight focus:outline-none focus:shadow-outline"
                         value={input}
                         onChange={(e) => handleInputChange(e, index)}
                     />

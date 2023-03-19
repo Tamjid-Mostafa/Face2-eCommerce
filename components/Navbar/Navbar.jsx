@@ -1,12 +1,10 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import s from './Navbar.module.css'
+import Container from '@/components/ui/Container'
+import Logo from '@/components/ui/Logo/Logo'
+import Searchbar from '@/components/common/Searchbar'
 import NavbarRoot from './NavbarRoot'
-
-
-import Container from '../ui/Container'
-import Logo from '../ui/Logo/Logo'
-import Searchbar from '../common/Searchbar'
 
 
 

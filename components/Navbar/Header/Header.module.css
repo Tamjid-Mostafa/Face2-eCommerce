@@ -1,9 +1,9 @@
 .root {
-  @apply sticky top-0 z-40 bg-primary transition-all duration-500;
+  @apply fixed top-0  left-0 z-40 w-full bg-primary transition-all duration-150;
 }
 
 .nav {
-  @apply relative flex flex-row justify-between py-4 md:py-4;
+  @apply relative flex items-center justify-center px-2 lg:px-4 xl:mx-auto;
 }
 
 .navMenu {

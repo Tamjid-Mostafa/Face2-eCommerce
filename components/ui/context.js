@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'next-themes'
-import React, { createContext, useCallback, useMemo } from 'react'
+import React, { createContext, useCallback, useMemo, useReducer } from 'react'
 
 const initialState = {
   displaySidebar: false,
@@ -75,7 +75,7 @@ function uiReducer(state, action) {
 }
 
 export const UIProvider = (props) => {
-  const [state, dispatch] = React.useReducer(uiReducer, initialState)
+  const [state, dispatch] = useReducer(uiReducer, initialState)
 
   const openSidebar = useCallback(
     () => dispatch({ type: 'OPEN_SIDEBAR' }),
