@@ -4,15 +4,14 @@ import s from './Layout.module.css'
 import { useRouter } from 'next/router'
 import Footer from '../Footer'
 import Meta from './meta'
-import { Navbar } from '..'
 import Sidebar from '../ui/Sidebar'
 import LoginView from '../auth/LoginView'
 import CartSidebarView from '../cart/CartSidebarView'
 import dynamic from 'next/dynamic'
 import LoadingDots from '../ui/LoadingDots'
-import Header from '../Navbar/Header'
 import MenuSidebarView from '../Navbar/MenuSidebarView'
 import { useUI } from '../ui/context'
+import Header from '../Navbar/Header'
 
 
 const SidebarView = ({ sidebarView, closeSidebar, links }) => {
@@ -98,7 +97,7 @@ const Layout = ({ children, meta, pageProps: { categories = [], ...pageProps }, 
             <Meta {...meta} />
             <>
                 {router.pathname !== '/404' && (
-                    <Header />
+                    <Header absolute={router.pathname === '/' && true} />
                 )}
                 {children}
                 {router.pathname !== '/404' && (
