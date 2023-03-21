@@ -1,17 +1,18 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { CloudinaryContext, Image, Transformation } from 'cloudinary-react';
+// import { CloudinaryContext, Image, Transformation } from 'cloudinary-react';
 import Link from 'next/link';
-import UploadImage from './UploadImage';
-import { DynamicImageUpload, InputDynamic } from '.';
+import { DynamicImageUpload, InputDynamic, UploadImage } from '.';
+// import UploadImage from './UploadImage';
+// import { DynamicImageUpload, InputDynamic } from '.';
 
 
 const AddProduct = () => {
-    const [image, setImage] = useState(null);
+    // const [image, setImage] = useState(null);
     const { register, handleSubmit, errors } = useForm();
 
     return (
-        <div className='mt-12 mw-[1480px] mx-auto'>
+        <div className='mt-56 mw-[1480px] mx-auto'>
             <div className='flex justify-between items-start'>
                 <h1 className='font-semibold text-2xl mb-5'>Add Product</h1>
                 <Link href="">
@@ -19,44 +20,12 @@ const AddProduct = () => {
                 </Link>
             </div>
             <div className="flex justify-around">
-                {/* <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center border">
-                    <form
-                        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col"
-                    // onSubmit={handleSubmit(onSubmit)}
-                    >
-                        <h2 className="text-xl font-bold mb-4">Upload an Image</h2>
-                        <input
-                            type="file"
-                            name="image"
-                            accept="image/*"
-                            className="mb-4"
-                            {...register("image", { required: true })}
-                        />
-                        <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            type="submit"
-                        >
-                            Upload
-                        </button>
-                    </form>
-                    {image && (
-                        <CloudinaryContext cloudName="your_cloud_name">
-                            <div className="max-w-md mx-auto">
-                                <Image publicId={image}>
-                                    <Transformation width="500" crop="scale" />
-                                </Image>
-                            </div>
-                        </CloudinaryContext>
-                    )}
-                </div> */}
                 <div className="">
                     {/* <UploadImage /> */}
                     <DynamicImageUpload />
                 </div>
                 <div className="w-1/2 p-4">
-                    <form
-                    // onSubmit={handleSubmit(onSubmit)}
-                    >
+                    <form>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                             <div className="mb-4">
                                 <label className="block mb-2 font-bold text-accent-7" htmlFor="name">
