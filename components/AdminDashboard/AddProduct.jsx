@@ -12,7 +12,7 @@ const AddProduct = () => {
     const { register, handleSubmit, errors } = useForm();
 
     return (
-        <div className='mt-12 mw-[1480px] mx-auto'>
+        <div className='mt-56 mw-[1480px] mx-auto'>
             <div className='flex justify-between items-start'>
                 <h1 className='font-semibold text-2xl mb-5'>Add Product</h1>
                 <Link href="">
